@@ -1,0 +1,4 @@
+/* pr écran large type desktop */
+$large: 1064px;
+$medium: 768px;
+$large-screen: "only screen and (min-width: #{$large})";

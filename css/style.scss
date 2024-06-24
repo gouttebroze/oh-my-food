@@ -1,22 +1,14 @@
+@import "./responsive.scss";
+
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
+$btn-text-color: #008766;
+$shadow-color: rgba(0,0,0,0.2);
 
 .shrikhand-regular {
   font-family: "Shrikhand", serif;
   font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-thin {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
   font-style: normal;
 }
 
@@ -26,66 +18,28 @@ $third-color: #99E2D0;
   font-style: normal;
 }
 
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.roboto-black {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.roboto-thin-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.roboto-light-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.roboto-regular-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-medium-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.roboto-bold-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.roboto-black-italic {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
 *, ::after, ::before {
   font-family: "Roboto", sans-serif;
 }
 
 html {
   font-size: 62.5%;
+}
+
+%shadow {
+  box-shadow: 0px 10px 6px $shadow-color;
+  -webkit-box-shadow: 0px 10px 12px 0px $shadow-color;
+  -moz-box-shadow: 0px 10px 12px 0px $shadow-color;
+}
+
+.btn {
+  @extend %shadow;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer; 
 }
 
 .header {
@@ -134,25 +88,69 @@ html {
   }
 }
 
-.btn {
+.btn--linear-gardient {
+  @extend .btn;
   background: rgb(147,86,220);
   background: -moz-linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
   background: -webkit-linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
   background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-
-  border: none;
   color: white;
-  font-size: 1.6rem;
-  font-weight: 500;
   width: 218px;
-  height: 50px;
-  border-radius: 25px;
-  cursor: pointer;
-  /* filter: drop-shadow(00.5rem 0.5rem 2rem rgba(0,0,0,0.3)); */
-  box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.2);
-  -webkit-box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 10px 12px 0px rgba(0,0,0,0.2);
+  &:hover {
+    /* todo */
+    background: $primary-color;
+  }
+}
+
+.fonctionnement {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  row-gap: 2rem;
+  &__title {
+    font-size: 2.4rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    &--link {
+    }
+  }
+}
+
+.btn--width {
+  width: 100%;
+}
+
+ol {
+  list-style: none;
+  counter-reset: my-count;
+}
+li {
+  counter-increment: my-count;
+  margin: 0.25rem;
+  position: relative;
+}
+li::before {
+  /* to create circle around counter number */
+  content: counter(my-count); /* create an incremental counter on every <li> */
+  background: $primary-color;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 2rem;
+  color: white;
+  text-align: center;
+  margin-right: 0.5rem;
+
+  /* to move circles positions */
+  position: absolute;
+  top: 1.5rem;
+  left: -0.8rem;
 }
 
 .cards {
@@ -163,6 +161,18 @@ html {
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  &__btn {
+    @extend .btn;
+    background-color: $third-color;
+    color: $btn-text-color;
+    border-radius: 0.5rem;
+    width: 20vw;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 
   &__image {
     object-fit: cover;
@@ -179,4 +189,10 @@ html {
 .footer-title {
   font-family: "Shrikhand", serif;
   font-size: 1.8rem;
+}
+
+@media #{$large-screen} { 
+  html {
+    background-color: black;
+  }
 }
