@@ -1,4 +1,11 @@
-# questions
+# SASS - BEM - CSS animations
+
+## Versionning / Déploiement
+
+* Projet en déploiement continue sur les [Github actions](https://gouttebroze.github.io/oh-my-food/).
+* Code source / Repo. disponible [ici](https://github.com/gouttebroze/oh-my-food).
+
+## Questions
 
 * logo coeur ds les cards:
   * signaler la couleur (transparent ou linear) ds le "alt" de la balise <img>?

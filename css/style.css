@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* pr écran large type desktop */
+/* @import "./base.scss"; */
+/* linear color */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 .shrikhand-regular {
   font-family: "Shrikhand", serif;
@@ -13,7 +15,9 @@
   font-style: normal;
 }
 
-*, ::after, ::before {
+*,
+::after,
+::before {
   font-family: "Roboto", sans-serif;
 }
 
@@ -54,8 +58,10 @@ a {
 .location {
   width: 100%;
   display: flex;
-  align-items: center; /* to center icon & title on vertical axe */
-  justify-content: center; /* to center icon & title on horizontal axe */
+  align-items: center;
+  /* to center icon & title on vertical axe */
+  justify-content: center;
+  /* to center icon & title on horizontal axe */
   -moz-column-gap: 20px;
        column-gap: 20px;
   background-color: rgb(234, 234, 234);
@@ -87,7 +93,7 @@ a {
 .btn--linear-gardient {
   background: rgb(147, 86, 220);
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
   color: white;
   width: 218px;
 }
@@ -111,11 +117,13 @@ a {
   flex-direction: column;
   gap: 2rem;
 }
+
 .btn--width {
   width: 100%;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -129,7 +137,8 @@ ol li {
 }
 ol li::before {
   /* to create circle around counter number */
-  content: counter(my-count); /* create an incremental counter on every <li> */
+  content: counter(my-count);
+  /* create an incremental counter on every <li> */
   background: #9356DC;
   width: 2rem;
   height: 2rem;
@@ -184,6 +193,7 @@ ol li::before {
 .card .content__text {
   display: flex;
   flex-direction: column;
+  padding-left: 1.3rem;
 }
 
 .footer-block {
@@ -194,6 +204,8 @@ ol li::before {
 .footer-title {
   font-family: "Shrikhand", serif;
   font-size: 1.8rem;
+  padding-left: 2.5rem;
+  padding-top: 2.2rem;
 }
 
 @media only screen and (min-width: 1064px) {
