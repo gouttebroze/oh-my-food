@@ -153,10 +153,9 @@ ul {
   background: #9356DC;
 }
 
-.btn--width {
+/* .btn--width {
   width: 100%;
-}
-
+} */
 .btn-submit {
   display: flex;
   justify-content: center;
@@ -172,4 +171,4 @@ ul {
   font-size: 1.8rem;
   padding-left: 2.5rem;
   padding-top: 2.2rem;
-}/*# sourceMappingURL=menu.css.map */
+}/*# sourceMappingURL=menu2.css.map */

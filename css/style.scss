@@ -1,3 +1,15 @@
+/* @font-face {
+  font-family: "Shrikhand", serif;
+  src: url(../assets/Fonts/shrikhand/Shrikhand-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+} */
+
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
+}
+
 @import "./responsive.scss";
 /* @import "./base.scss"; */
 @import "./themes.scss";
@@ -12,7 +24,7 @@ $dark-color: #353535;
 $second-background-color: rgba(234, 234, 234, 1);
 $shadow-color: rgba(0, 0, 0, 0.2);
 
-.shrikhand-regular {
+/* .shrikhand-regular {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-style: normal;
@@ -22,7 +34,7 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
+} */
 
 *,
 ::after,
@@ -232,6 +244,7 @@ ol {
 
 .footer-title {
   font-family: "Shrikhand", serif;
+  font-style: italic;
   font-size: 1.8rem;
   padding-left: 2.5rem;
   padding-top: 2.2rem;
