@@ -81,6 +81,7 @@ ul {
   background-color: themes.$second-background-color;
   border-top-left-radius: 4rem;
   border-top-right-radius: 4rem;
+  padding-bottom: 4rem;
 }
 
 .title-block {
@@ -158,6 +159,7 @@ ul {
 .btn-submit {
   display: flex;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 .cards {
@@ -174,15 +176,25 @@ ul {
 .footer-block {
   background-color: themes.$dark-color;
   color: white;
+  padding-bottom: 2.2rem;
 
   &__title {
     font-family: "Shrikhand", serif;
     font-size: 1.8rem;
     padding-left: 2.5rem;
     padding-top: 2.2rem;
+    margin-top: 0;
+  }
+
+  ul {
+    padding-left: 2.5rem;
   }
 
   li {
-    padding-left: 6px;
+    font-size: 1.6rem;
+  }
+
+  span {
+    padding-left: 7px;
   }
 }

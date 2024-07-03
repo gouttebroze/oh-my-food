@@ -220,7 +220,19 @@ ol {
       display: flex;
       flex-direction: column;
       padding-left: 1.3rem;
+
+      &--title {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      &--subtitle {
+        font-size: 1.7rem;
+        font-weight: 300;
+      }
     }
+
+
   }
 
 }
@@ -228,6 +240,7 @@ ol {
 .footer-block {
   background-color: $dark-color;
   color: white;
+  padding-bottom: 2.2rem;
 
   &__title {
     font-family: "Shrikhand", serif;
@@ -235,9 +248,18 @@ ol {
     font-size: 1.8rem;
     padding-left: 2.5rem;
     padding-top: 2.2rem;
+    margin-top: 0;
   }
 
-  &__link {
+  ul {
+    padding-left: 2.5rem;
+  }
+
+  li {
+    font-size: 1.6rem;
+  }
+
+  span {
     padding-left: 7px;
   }
 }

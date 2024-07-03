@@ -76,6 +76,7 @@ ul {
   background-color: rgb(246, 246, 246);
   border-top-left-radius: 4rem;
   border-top-right-radius: 4rem;
+  padding-bottom: 4rem;
 }
 
 .title-block {
@@ -142,6 +143,7 @@ ul {
 .btn-submit {
   display: flex;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 .cards {
@@ -157,13 +159,21 @@ ul {
 .footer-block {
   background-color: #353535;
   color: white;
+  padding-bottom: 2.2rem;
 }
 .footer-block__title {
   font-family: "Shrikhand", serif;
   font-size: 1.8rem;
   padding-left: 2.5rem;
   padding-top: 2.2rem;
+  margin-top: 0;
+}
+.footer-block ul {
+  padding-left: 2.5rem;
 }
 .footer-block li {
-  padding-left: 6px;
+  font-size: 1.6rem;
+}
+.footer-block span {
+  padding-left: 7px;
 }/*# sourceMappingURL=menu2.css.map */

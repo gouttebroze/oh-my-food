@@ -193,10 +193,19 @@ ol li::before {
   flex-direction: column;
   padding-left: 1.3rem;
 }
+.card .content__text--title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.card .content__text--subtitle {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
 
 .footer-block {
   background-color: #353535;
   color: white;
+  padding-bottom: 2.2rem;
 }
 .footer-block__title {
   font-family: "Shrikhand", serif;
@@ -204,8 +213,15 @@ ol li::before {
   font-size: 1.8rem;
   padding-left: 2.5rem;
   padding-top: 2.2rem;
+  margin-top: 0;
 }
-.footer-block__link {
+.footer-block ul {
+  padding-left: 2.5rem;
+}
+.footer-block li {
+  font-size: 1.6rem;
+}
+.footer-block span {
   padding-left: 7px;
 }
 
