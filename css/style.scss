@@ -24,18 +24,6 @@ $dark-color: #353535;
 $second-background-color: rgba(234, 234, 234, 1);
 $shadow-color: rgba(0, 0, 0, 0.2);
 
-/* .shrikhand-regular {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-} */
-
 *,
 ::after,
 ::before {
@@ -240,15 +228,21 @@ ol {
 .footer-block {
   background-color: $dark-color;
   color: white;
+
+  &__title {
+    font-family: "Shrikhand", serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    padding-left: 2.5rem;
+    padding-top: 2.2rem;
+  }
+
+  &__link {
+    padding-left: 7px;
+  }
 }
 
-.footer-title {
-  font-family: "Shrikhand", serif;
-  font-style: italic;
-  font-size: 1.8rem;
-  padding-left: 2.5rem;
-  padding-top: 2.2rem;
-}
+
 
 @media #{$large-screen} {
   html {

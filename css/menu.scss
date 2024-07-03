@@ -1,9 +1,4 @@
-/* @font-face {
-  font-family: "Shrikhand", serif;
-  src: url(../assets/Fonts/shrikhand/Shrikhand-Regular.ttf) format("truetype");
-  font-weight: 400;
-  font-style: normal;
-} */
+@use "./themes.scss";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 @font-face {
@@ -11,16 +6,14 @@
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
 }
 
-@import "./themes.scss";
-
-$primary-color: #9356DC;
+/* $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
 $btn-text-color: #008766;
 $background-color: #FFF;
 $dark-color: #353535;
 $second-background-color: rgba(234, 234, 234, 1);
-$shadow-color: rgba(0, 0, 0, 0.2);
+$shadow-color: rgba(0, 0, 0, 0.2); */
 
 
 /* .shrikhand-regular {
@@ -62,9 +55,9 @@ ul {
 }
 
 %shadow {
-  box-shadow: 0px 10px 6px $shadow-color;
-  -webkit-box-shadow: 0px 10px 12px 0px $shadow-color;
-  -moz-box-shadow: 0px 10px 12px 0px $shadow-color;
+  box-shadow: 0px 10px 6px themes.$shadow-color;
+  -webkit-box-shadow: 0px 10px 12px 0px themes.$shadow-color;
+  -moz-box-shadow: 0px 10px 12px 0px themes.$shadow-color;
 }
 
 .btn {
@@ -73,7 +66,7 @@ ul {
   border: none;
   border-radius: 25px;
   /* changed only on "menu" pages */
-  background-color: $background-color;
+  background-color: themes.$background-color;
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;
@@ -107,10 +100,11 @@ ul {
 }
 
 .main-container {
-  background-color: $second-background-color;
+  background-color: themes.$second-background-color;
   /* margin-left: 1.7rem; */
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
+  padding-bottom: 4rem;
 }
 
 .title-block {
@@ -120,7 +114,7 @@ ul {
 }
 
 .menu {
-  background-color: $second-background-color;
+  background-color: themes.$second-background-color;
   padding: 1rem 1.7rem;
 
   &__type {
@@ -136,7 +130,7 @@ ul {
     height: 3px;
     bottom: -6px;
     left: 0;
-    background-color: $third-color;
+    background-color: themes.$third-color;
   }
 
   &__title {
@@ -169,13 +163,13 @@ ul {
   background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
   background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-  color: white;
+  color: themes.$background-color;
   width: 218px;
   height: 50px;
 
   &:hover {
     /* todo */
-    background: $primary-color;
+    background: themes.$primary-color;
   }
 }
 
@@ -186,16 +180,31 @@ ul {
 .btn-submit {
   display: flex;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 .footer-block {
-  background-color: $dark-color;
+  background-color: themes.$dark-color;
   color: white;
-}
+  padding-bottom: 2.2rem;
 
-.footer-title {
-  font-family: "Shrikhand", serif;
-  font-size: 1.8rem;
-  padding-left: 2.5rem;
-  padding-top: 2.2rem;
+  &__title {
+    font-family: "Shrikhand", serif;
+    font-size: 1.8rem;
+    padding-left: 2.5rem;
+    padding-top: 2.2rem;
+    margin-top: 0;
+  }
+
+  ul {
+    padding-left: 2.5rem;
+  }
+
+  li {
+    font-size: 1.6rem;
+  }
+
+  span {
+    padding-left: 7px;
+  }
 }

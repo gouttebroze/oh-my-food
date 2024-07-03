@@ -1,34 +1,10 @@
 @use "./themes.scss";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import "./themes.scss";
-
 
 @font-face {
   font-family: "Roboto", sans-serif;
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
 }
-
-/*$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$third-color: #99E2D0;
-$btn-text-color: #008766;
-$background-color: #FFF;
-$dark-color: #353535;
- $second-background-color: rgba(234, 234, 234, 1); 
-$shadow-color: rgba(0, 0, 0, 0.2);*/
-
-
-/* .shrikhand-regular {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-} */
 
 *,
 ::after,
@@ -103,9 +79,8 @@ ul {
 
 .main-container {
   background-color: themes.$second-background-color;
-  /* margin-left: 1.7rem; */
-  border-top-left-radius: 5rem;
-  border-top-right-radius: 5rem;
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
 }
 
 .title-block {
@@ -138,6 +113,8 @@ ul {
     font-size: 1.8rem;
     font-weight: 500;
     padding-left: 1.7rem;
+    /* padding: 12px 47px 5px 15px */
+    ;
   }
 
   &__description {
@@ -183,18 +160,29 @@ ul {
   justify-content: center;
 }
 
+.cards {
+  margin-bottom: 20px;
+}
+
 .card {
   background-color: themes.$background-color;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  @extend %shadow
 }
 
 .footer-block {
   background-color: themes.$dark-color;
   color: white;
-}
 
-.footer-title {
-  font-family: "Shrikhand", serif;
-  font-size: 1.8rem;
-  padding-left: 2.5rem;
-  padding-top: 2.2rem;
+  &__title {
+    font-family: "Shrikhand", serif;
+    font-size: 1.8rem;
+    padding-left: 2.5rem;
+    padding-top: 2.2rem;
+  }
+
+  li {
+    padding-left: 6px;
+  }
 }

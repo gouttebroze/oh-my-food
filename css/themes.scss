@@ -13,10 +13,9 @@ $third-color: #99E2D0;
 $btn-text-color: #008766;
 $background-color: #FFF;
 $dark-color: #353535;
-$second-background-color: rgba(234, 234, 234, 1);
-$shadow-color: rgba(0, 0, 0, 0.2);
 
-$test-import: red;
+$second-background-color: rgba(246, 246, 246, 1);
+$shadow-color: rgba(0, 0, 0, 0.2);
 
 @mixin shadow {
   box-shadow: 0px 10px 6px $shadow-color;

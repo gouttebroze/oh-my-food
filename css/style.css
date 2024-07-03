@@ -13,17 +13,6 @@
 /* pr écran large type desktop */
 /* @import "./base.scss"; */
 /* linear color */
-/* .shrikhand-regular {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-} */
 *,
 ::after,
 ::before {
@@ -209,13 +198,15 @@ ol li::before {
   background-color: #353535;
   color: white;
 }
-
-.footer-title {
+.footer-block__title {
   font-family: "Shrikhand", serif;
   font-style: italic;
   font-size: 1.8rem;
   padding-left: 2.5rem;
   padding-top: 2.2rem;
+}
+.footer-block__link {
+  padding-left: 7px;
 }
 
 @media only screen and (min-width: 1064px) {

@@ -1,15 +1,17 @@
-/* @font-face {
-  font-family: "Shrikhand", serif;
-  src: url(../assets/Fonts/shrikhand/Shrikhand-Regular.ttf) format("truetype");
-  font-weight: 400;
-  font-style: normal;
-} */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* linear color */
 @font-face {
   font-family: "Roboto", sans-serif;
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
 }
-/* linear color */
+/* $primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$third-color: #99E2D0;
+$btn-text-color: #008766;
+$background-color: #FFF;
+$dark-color: #353535;
+$second-background-color: rgba(234, 234, 234, 1);
+$shadow-color: rgba(0, 0, 0, 0.2); */
 /* .shrikhand-regular {
   font-family: "Shrikhand", serif;
   font-weight: 400;
@@ -90,10 +92,11 @@ ul {
 }
 
 .main-container {
-  background-color: rgb(234, 234, 234);
+  background-color: rgb(246, 246, 246);
   /* margin-left: 1.7rem; */
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
+  padding-bottom: 4rem;
 }
 
 .title-block {
@@ -103,7 +106,7 @@ ul {
 }
 
 .menu {
-  background-color: rgb(234, 234, 234);
+  background-color: rgb(246, 246, 246);
   padding: 1rem 1.7rem;
 }
 .menu__type {
@@ -144,7 +147,7 @@ ul {
   background: rgb(147, 86, 220);
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-  color: white;
+  color: #FFF;
   width: 218px;
   height: 50px;
 }
@@ -160,16 +163,27 @@ ul {
 .btn-submit {
   display: flex;
   justify-content: center;
+  margin-top: 4rem;
 }
 
 .footer-block {
   background-color: #353535;
   color: white;
+  padding-bottom: 2.2rem;
 }
-
-.footer-title {
+.footer-block__title {
   font-family: "Shrikhand", serif;
   font-size: 1.8rem;
   padding-left: 2.5rem;
   padding-top: 2.2rem;
+  margin-top: 0;
+}
+.footer-block ul {
+  padding-left: 2.5rem;
+}
+.footer-block li {
+  font-size: 1.6rem;
+}
+.footer-block span {
+  padding-left: 7px;
 }/*# sourceMappingURL=menu.css.map */
