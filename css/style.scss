@@ -1,28 +1,19 @@
-/* @font-face {
-  font-family: "Shrikhand", serif;
-  src: url(../assets/Fonts/shrikhand/Shrikhand-Regular.ttf) format("truetype");
-  font-weight: 400;
-  font-style: italic;
-} */
-
-@font-face {
-  font-family: "Roboto", sans-serif;
-  src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
-}
+@use "./themes.scss";
 
 @import "./responsive.scss";
-/* @import "./base.scss"; */
-@import "./themes.scss";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
-$primary-color: #9356DC;
+/* @font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
+} */
+/* $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
 $btn-text-color: #008766;
 $background-color: #FFF;
 $dark-color: #353535;
 $second-background-color: rgba(234, 234, 234, 1);
-$shadow-color: rgba(0, 0, 0, 0.2);
+$shadow-color: rgba(0, 0, 0, 0.2); */
 
 *,
 ::after,
@@ -35,9 +26,9 @@ html {
 }
 
 %shadow {
-  box-shadow: 0px 10px 6px $shadow-color;
-  -webkit-box-shadow: 0px 10px 12px 0px $shadow-color;
-  -moz-box-shadow: 0px 10px 12px 0px $shadow-color;
+  box-shadow: 0px 10px 6px themes.$shadow-color;
+  -webkit-box-shadow: 0px 10px 12px 0px themes.$shadow-color;
+  -moz-box-shadow: 0px 10px 12px 0px themes.$shadow-color;
 }
 
 a {
@@ -111,12 +102,12 @@ a {
   background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
   background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-  color: white;
+  color: themes.$background-color;
   width: 218px;
 
   &:hover {
     /* todo */
-    background: $primary-color;
+    background: themes.$primary-color;
   }
 }
 
@@ -161,13 +152,13 @@ ol {
     /* to create circle around counter number */
     content: counter(my-count);
     /* create an incremental counter on every <li> */
-    background: $primary-color;
+    background: themes.$primary-color;
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
     display: inline-block;
     line-height: 2rem;
-    color: white;
+    color: themes.$background-color;
     text-align: center;
     margin-right: 0.5rem;
 
@@ -181,7 +172,7 @@ ol {
 .cards {
   display: flex;
   flex-direction: column;
-  background-color: $second-background-color;
+  background-color: themes.$second-background-color;
   gap: 18px;
 }
 
@@ -190,13 +181,13 @@ ol {
   flex-direction: column;
   position: relative;
   border-radius: 15px;
-  background-color: $background-color;
+  background-color: themes.$background-color;
   margin: 0 17px;
 
   &__btn {
     @extend .btn;
-    background-color: $third-color;
-    color: $btn-text-color;
+    background-color: themes.$third-color;
+    color: themes.$btn-text-color;
     border-radius: 0.5rem;
     width: 20vw;
     position: absolute;
@@ -231,12 +222,16 @@ ol {
         font-weight: 300;
       }
     }
+
+    &__logo {
+      width: 2rem;
+    }
   }
 }
 
 .footer-block {
-  background-color: $dark-color;
-  color: white;
+  background-color: themes.$dark-color;
+  color: themes.$background-color;
   padding-bottom: 2.2rem;
 
   &__title {
@@ -261,10 +256,8 @@ ol {
   }
 }
 
-
-
-@media #{$large-screen} {
+/* @media #{$large-screen} {
   html {
     background-color: black;
   }
-}
+} */

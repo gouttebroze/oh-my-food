@@ -81,11 +81,10 @@ ul {
 
   &__top {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
 
-    /* TODO: center this logo */
     &--logo {
       width: 40vh;
       margin: 2rem 4rem;

@@ -75,10 +75,9 @@ ul {
 }
 .header-block__top {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  /* TODO: center this logo */
 }
 .header-block__top--logo {
   width: 40vh;

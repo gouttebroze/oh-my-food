@@ -56,7 +56,7 @@ ul {
 }
 .header-block__top {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
   /* TODO: center this logo */
