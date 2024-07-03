@@ -93,10 +93,12 @@ ul {
 
 .main-container {
   background-color: rgb(246, 246, 246);
-  /* margin-left: 1.7rem; */
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
   padding-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+  top: -30px;
 }
 
 .title-block {

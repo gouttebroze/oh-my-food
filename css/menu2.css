@@ -77,6 +77,9 @@ ul {
   border-top-left-radius: 4rem;
   border-top-right-radius: 4rem;
   padding-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+  top: -30px;
 }
 
 .title-block {
