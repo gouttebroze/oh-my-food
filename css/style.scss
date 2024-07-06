@@ -206,6 +206,7 @@ ol {
   .content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     &__text {
       display: flex;
@@ -215,16 +216,28 @@ ol {
       &--title {
         font-size: 1.8rem;
         font-weight: 700;
+        padding-bottom: .5rem;
+        margin-top: 1.6rem;
+        margin-bottom: 0;
       }
 
       &--subtitle {
         font-size: 1.7rem;
         font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 1.2rem;
       }
     }
 
     &__logo {
-      width: 2rem;
+      width: 2.2rem;
+      height: 2.1rem;
+      margin-right: 2.5rem;
+      transform: background-color .3s;
+
+      &:hover {
+        background-color: black;
+      }
     }
   }
 }

@@ -188,6 +188,7 @@ ol li::before {
 .card .content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .card .content__text {
   display: flex;
@@ -197,13 +198,24 @@ ol li::before {
 .card .content__text--title {
   font-size: 1.8rem;
   font-weight: 700;
+  padding-bottom: 0.5rem;
+  margin-top: 1.6rem;
+  margin-bottom: 0;
 }
 .card .content__text--subtitle {
   font-size: 1.7rem;
   font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
 }
 .card .content__logo {
-  width: 2rem;
+  width: 2.2rem;
+  height: 2.1rem;
+  margin-right: 2.5rem;
+  transform: background-color 0.3s;
+}
+.card .content__logo:hover {
+  background-color: black;
 }
 
 .footer-block {
