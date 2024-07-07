@@ -6,37 +6,10 @@
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
 }
 
-/* $primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$third-color: #99E2D0;
-$btn-text-color: #008766;
-$background-color: #FFF;
-$dark-color: #353535;
-$second-background-color: rgba(234, 234, 234, 1);
-$shadow-color: rgba(0, 0, 0, 0.2); */
-
-
-/* .shrikhand-regular {
-  font-family: "Shrikhand", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-} */
-
-*,
-::after,
-::before {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-}
-
 html {
   font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 a {
@@ -153,6 +126,115 @@ ul {
   }
 }
 
+.cards {
+  background-color: themes.$second-background-color;
+  padding: 1rem 1.7rem;
+  
+  &__type {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    position: relative;
+  }
+
+  &__type::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    bottom: -6px;
+    left: 0;
+    background-color: themes.$third-color;
+  }
+}
+
+.card {
+  height: 6.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  margin-bottom: 1.2rem;
+  @extend %shadow;
+  border: none;   
+  border-radius: 25px;
+  font-size: 1.6rem;
+  background-color: themes.$background-color;
+
+  // transition: background-color .3s;
+
+  // &:hover {
+  //   animation: slideToLeft .2s;   
+  // }
+
+  &__content {  
+    // display: flex;
+    // align-items: baseline;
+    // flex-direction: column; 
+    //margin-bottom: 1.35rem;
+    padding-top: 1.35rem;
+    padding-bottom: 1.35rem;
+
+    &--title {
+      font-size: 1.8rem;
+      font-weight: 500;
+      padding-left: 1.7rem;
+    }
+
+    &--description {
+      font-size: 1.5rem;
+      font-weight: 300;
+      padding-left: 1.7rem;
+      // margin-bottom: 1.35rem;
+    }
+  }  
+  
+  &__checked {
+    display: none;
+    position: absolute;
+    color: themes.$background-color;
+    background-color: themes.$third-color;
+    padding: 2.2rem 2rem;
+    right: 0;
+    appearance: none;
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+
+    &::before {
+      content: '\f00c';
+    }
+
+    // &:hover {
+    //   display: inline;
+    //   animation: slideToLeft .2s;   
+    // }
+  }
+
+  &__bold {
+    font-weight: 700;
+    padding: 3.75rem 1.35rem 1.3rem 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/********************************************************************************
+        card menu animation - TODO : add "keyframes" & "transition translateX()"
+*********************************************************************************/
+.card:hover .card__checked {
+  display: block;
+}
+
+.card__input {
+  display: none;
+  appearance: none;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+
+  &::before {
+    content: '\f00c';  
+  }
+}
+
 .btn--linear-gardient {
   @extend .btn;
   display: flex;
@@ -207,5 +289,18 @@ ul {
 
   span {
     padding-left: 7px;
+  }
+}
+
+@keyframes slideToLeft {
+  from {
+    transform: translateX(0);
+    background-color: inherit;
+    right: 0;
+  }
+  to {
+    transform: translateX(-60px);
+    background-color: themes.$third-color;
+    right: 50px;
   }
 }

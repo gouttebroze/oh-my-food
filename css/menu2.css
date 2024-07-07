@@ -4,15 +4,10 @@
   font-family: "Roboto", sans-serif;
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
 }
-*,
-::after,
-::before {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-}
-
 html {
   font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 a {

@@ -1,28 +1,15 @@
 @use "./themes.scss";
 
+@import "./fontawesome.scss";
+@import "./regular.scss";
+@import "./solid.scss";
+
 @import "./responsive.scss";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-/* @font-face {
-  font-family: "Roboto", sans-serif;
-  src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
-} */
-/* $primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$third-color: #99E2D0;
-$btn-text-color: #008766;
-$background-color: #FFF;
-$dark-color: #353535;
-$second-background-color: rgba(234, 234, 234, 1);
-$shadow-color: rgba(0, 0, 0, 0.2); */
-
-*,
-::after,
-::before {
-  font-family: "Roboto", sans-serif;
-}
 
 html {
   font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
 }
 
 %shadow {
@@ -86,12 +73,20 @@ a {
   text-align: center;
 
   &__title {
+    text-align: center;
     font-size: 2.4rem;
+    margin-top: 5.7rem;
+    padding-right: 2.6rem;
+    padding-left: 3.4rem;
   }
 
   &__subtitle {
+    text-align: center;
     font-size: 1.8rem;
     font-weight: 300;
+    padding-right: 4.2rem;
+    padding-left: 4.2rem;
+    padding-bottom: 1.6rem;
   }
 }
 
@@ -105,10 +100,6 @@ a {
   color: themes.$background-color;
   width: 218px;
 
-  &:hover {
-    /* todo */
-    background: themes.$primary-color;
-  }
 }
 
 .fonctionnement {
@@ -120,6 +111,7 @@ a {
 
   &__title {
     font-size: 2.4rem;
+    margin-left: 2rem;
   }
 
   &__content {
@@ -174,6 +166,13 @@ ol {
   flex-direction: column;
   background-color: themes.$second-background-color;
   gap: 18px;
+  
+
+  &__title {
+    margin-top: 5.4rem;
+    font-size: 2.4rem;
+    margin-left: 2rem;
+  }
 }
 
 .card {
@@ -230,14 +229,10 @@ ol {
     }
 
     &__logo {
-      width: 2.2rem;
+      font-size: $fa-size-scale-lg;
+      width: 2.2rem; 
       height: 2.1rem;
       margin-right: 2.5rem;
-      transform: background-color .3s;
-
-      &:hover {
-        background-color: black;
-      }
     }
   }
 }
@@ -268,8 +263,17 @@ ol {
     padding-left: 7px;
   }
 }
+/*
+@keyframes heartColor {
+  from {
+    background-image: url(../assets/Card/Vector.svg); 
+  } 
+  to {
+    
+  }
+}
 
-/* @media #{$large-screen} {
+ @media #{$large-screen} {
   html {
     background-color: black;
   }
