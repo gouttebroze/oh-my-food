@@ -6,6 +6,61 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /* linear color */
+.header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-block .logo {
+  width: 40vh;
+  margin: 2rem 4rem;
+}
+
+/* %shadow {
+  box-shadow: 0px 10px 6px $shadow-color;
+  -webkit-box-shadow: 0px 10px 12px 0px $shadow-color;
+  -moz-box-shadow: 0px 10px 12px 0px $shadow-color;
+}
+
+.btn {
+  @extend %shadow;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer; 
+} 
+
+.btn--width {
+  width: 100%;
+}
+
+.btn--linear-gardient {
+  @extend .btn;
+  background: rgb(147,86,220);
+  background: -moz-linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+  background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  color: white;
+  width: 218px;
+  &:hover {
+    background: $primary-color;
+  }
+}
+
+.footer-block {
+  background-color: $dark-color;
+  color: white;
+}
+
+.footer-title {
+  font-family: "Shrikhand", serif;
+  font-size: 1.8rem;
+  padding-left: 2.5rem;
+  padding-top: 2.2rem;
+} */
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900);
@@ -8279,6 +8334,10 @@ readers do not read off random characters that represent icons */
 }
 
 /* pr écran large type desktop */
+/* * {
+  padding: 0;
+  margin: 0;
+} */
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
@@ -8299,19 +8358,30 @@ a {
   border: none;
   font-size: 1.6rem;
   font-weight: 500;
-  height: 50px;
+  height: 7.2rem;
   border-radius: 25px;
   cursor: pointer;
 }
+.btn__icon {
+  padding-right: 3rem;
+}
+.btn__text {
+  display: inline-block;
+}
 
-.header {
+.header-block {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.header .logo {
+.header-block .logo {
   width: 40vh;
   margin: 2rem 4rem;
+}
+
+.main-container {
+  background-color: rgb(246, 246, 246);
+  padding-bottom: 6.6rem;
 }
 
 .location {
@@ -8364,17 +8434,22 @@ a {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
   color: #FFF;
   width: 218px;
+  height: 5rem;
 }
 
 .fonctionnement {
-  margin-top: 2rem;
+  background-color: #FFF;
+  margin-top: 5.7rem;
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
-  row-gap: 2rem;
+  padding-bottom: 6.8rem;
+  /* align-items: flex-start; 
+  row-gap: 2rem;*/
 }
 .fonctionnement__title {
   font-size: 2.4rem;
+  padding-top: 2.5rem;
+  padding-bottom: 0;
   margin-left: 2rem;
 }
 .fonctionnement__content {
@@ -8415,7 +8490,7 @@ ol li::before {
   margin-right: 0.5rem;
   /* to move circles positions */
   position: absolute;
-  top: 1.5rem;
+  top: 2.5rem;
   left: -0.8rem;
 }
 
@@ -8442,17 +8517,19 @@ ol li::before {
 .card__btn {
   background-color: #99E2D0;
   color: #008766;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   width: 20vw;
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
+  height: 2.9rem;
+  font-size: 1.4rem;
 }
 .card__image {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 231px;
+  height: 184px;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -8460,6 +8537,18 @@ ol li::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 30px;
+  /* &__like {
+    margin-right: 2.5rem;
+    padding: 40px;
+
+    span {
+      display: inline-block;
+      font-size: $fa-size-scale-lg;
+      width: 2.2rem;
+      height: 2.1rem;
+    }
+  } */
 }
 .card .content__text {
   display: flex;
@@ -8478,12 +8567,6 @@ ol li::before {
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 1.2rem;
-}
-.card .content__logo {
-  font-size: 20;
-  width: 2.2rem;
-  height: 2.1rem;
-  margin-right: 2.5rem;
 }
 
 .footer-block {

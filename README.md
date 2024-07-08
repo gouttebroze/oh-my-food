@@ -63,3 +63,17 @@
 ### les icons
 
 * pbm de redimentionnement (date d'hier soir donc pas encore eu le temps de creuser...)
+
+* pbm de marges (base du style, casse tout ...)
+```scss
+* {
+  padding: 0;
+  margin: 0;
+}
+```
+
+## import en SCSS
+
+* voir pr importer (& factoriser) certains selecteurs (génériques) comme `header`, `footer` ... 
+  * avec `@use` ? ok pr variables mais comment pr selecteurs ? créer mixins ? 
+    * A CHERCHER
