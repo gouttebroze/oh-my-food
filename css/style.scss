@@ -71,6 +71,7 @@ a {
 .hero {
   margin-top: 1rem;
   text-align: center;
+  background-color: themes.$second-background-color;
 
   &__title {
     text-align: center;
