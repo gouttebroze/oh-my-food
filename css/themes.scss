@@ -1,5 +1,16 @@
-/* linear color */
-%linear-gardient {
+@use "sass:map";
+
+$font-weights: ("regular": 400, "medium": 500, "bold": 700);
+$box-shadow: (
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  "offset-x": 2px, 
+  "offset-y": 2px, 
+  "blur-radius": 2px, 
+  "spread-radius": 1px, 
+  "color":rgba(0, 0, 0, 0.2)
+);
+
+@mixin linear-gardient-primary {
   background: rgb(147, 86, 220);
   background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
   background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
@@ -7,13 +18,14 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
 }
 
-@mixin hover-linear-gardient {
+@mixin linear-gardient-secondary {
   background: rgb(168, 127, 218);
   background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
   background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
   background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
 }
+
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $third-color: #99E2D0;
@@ -23,8 +35,10 @@ $dark-color: #353535;
 $second-background-color: rgba(246, 246, 246, 1);
 $shadow-color: rgba(0, 0, 0, 0.2);
 
-@mixin shadow {
-  box-shadow: 0px 10px 6px $shadow-color;
-  -webkit-box-shadow: 0px 10px 12px 0px $shadow-color;
-  -moz-box-shadow: 0px 10px 12px 0px $shadow-color;
+@mixin shadow($color, $sizes) {
+  box-shadow: 0px 10px 6px $color;
+  -webkit-box-shadow: 0px 10px 12px 0px $color;
+  -moz-box-shadow: 0px 10px 12px 0px $color;
 }
+
+// $sizes: [8px, 9px, 10px, 11px, 12px];

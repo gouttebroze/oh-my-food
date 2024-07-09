@@ -42,6 +42,10 @@
 
 ### A propos des animations
 
+* trouver les valeurs des couleurs des boutons (``linear-gardient``) (& au survol)
+
+* pr l'animation au survol de l'icon "coeur" ? avec une image (pr faire avec couleur, faire avec `svg`)
+
 * Animation des cartes des restaurant 
   * chaque restaurant propose une carte, un menu avec plusieurs propositions pour l'entrée, le plat & le dessert
   * l'utilisateur peut choisir les propositions qu'il désire 
@@ -60,9 +64,6 @@
       * ce survol fait apparaitre un autre élément (caché) ? ou modifie le block ? 
       
 
-### les icons
-
-* pbm de redimentionnement (date d'hier soir donc pas encore eu le temps de creuser...)
 
 * pbm de marges (base du style, casse tout ...)
 ```scss
@@ -72,8 +73,49 @@
 }
 ```
 
-## import en SCSS
+## VEILLE - JAVASCRIPT
 
-* voir pr importer (& factoriser) certains selecteurs (génériques) comme `header`, `footer` ... 
-  * avec `@use` ? ok pr variables mais comment pr selecteurs ? créer mixins ? 
-    * A CHERCHER
++ créer la partie JavaScript du loader avec la base CSS déjà réalisée 
+
++ proposition: ``loader`` sous forme de ``custom element``, simple d'utilisation
+
+```html
+...
+<head>
+  ...
+  <title>Loader</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <script src="./index.js" type="module" defer></script>
+<head>
+
+<body>
+  <spinning-dots></spinning-dots>
+</body>
+```
+
+```js
+/* our class must extends from HTMLElement to create our customelement into HTML file */
+class SpinningDots extends HTMLElement {
+
+}
+
+customElements.define('spinning-dots', SpinningDots)
+
+```
+
+## MEMO 
+
+### MEMO SASS
+
+* La règle `@use` permet de charger les variables, mixins & fonctions, les partager & les réutiliser sans dupliquer de code entre différents fichiers `scss`.
+
+* Pour en savoir **+**, voir la doc. de `sass` [ici](https://sass-lang.com/documentation/at-rules/use/).

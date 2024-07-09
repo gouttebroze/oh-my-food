@@ -25,15 +25,16 @@
   <main>
     <div class="main-container">
       <section class="title-block">
-        <!-- font on title ? -->
         <h1 class="title">La palette du goût</h1>
-        <img src="./assets/Card/Vector.svg" alt="coeur transparent">
+        <!-- <img class="like" src="./assets/Card/Vector.svg" alt="coeur transparent"> -->
+        <label class="toggle-state" for="">
+          <input class="like-input" type="checkbox">
+        </label>
       </section>
 
       <section class="cards">
-
         <h3 class="cards__type">Entrées</h3>
-
+        
         <div class="card">
           <div class="card__content">
             <div class="card__content--title">
@@ -44,9 +45,9 @@
             </div>
           </div>
           <p class="card__bold">25€</p>
-          <div class="card__checked">
-            <!-- <span class="fa-solid fa-check"></span> -->
-          </div>
+          <!--<div class="card__checked">
+             <span class="fa-solid fa-check"></span> 
+          </div>-->
         </div>
 
         <div class="card">
@@ -60,8 +61,8 @@
           </div>
           <p class="card__bold">35€</p>
           <input class="card__input" type="checkbox">
-          <div class="card__checked">
-          </div>
+          <!-- <div class="card__checked">
+          </div> -->
         </div>
 
         <div class="card">
@@ -75,16 +76,14 @@
           </div>
           <p class="card__bold">20€</p>
           <input class="card__input" type="checkbox">
-          <div class="card__checked">
+          <!-- <div class="card__checked">
             <span class="fa-solid fa-check"></span>
-          </div>
+          </div> -->
         </div>
-
       </section>
 
-      <section class="menu">
-        <h3 class="menu__type">Plats</h3>
-       
+      <section class="cards">
+        <h3 class="cards__type">Plats</h3>
         <div class="card">
           <div class="card__content">
             <div class="card__content--title">
@@ -96,19 +95,24 @@
           </div>
           <p class="card__bold">40€</p>
           <input class="card__input" type="checkbox">
-          <div class="card__checked">
-          </div>
+          <!-- <div class="card__checked">
+          </div> -->
         </div>
-
-        <button class="btn btn--width">
-          <span class="menu__title">
-            <h3>Parmentier de queue de bœuf</h3>
-          </span>
-          <span class="menu__description">
-            <p>À la truffe noire sur sa purée de panais</p>
-            <p class="menu__description--bold">35€</p>
-          </span>
-        </button>
+        
+        <div class="card">
+          <div class="card__content">
+            <div class="card__content--title">
+              <h3>Parmentier de queue de bœuf</h3>
+            </div>
+            <div class="card__content--description">
+              <p>À la truffe noire sur sa purée de panais</p>           
+            </div>
+          </div>
+          <p class="card__bold">35€</p>
+          <input class="card__input" type="checkbox">
+          <!-- <div class="card__checked">
+          </div> -->
+        </div>
 
         <div class="card">
           <div class="card__content">
@@ -126,35 +130,52 @@
         </div>
       </section>
 
-      <section class="menu">
-        <h3 class="menu__type">Desserts</h3>
-        <button class="btn btn--width">
-          <span class="menu__title">
-            <h3>Paris-Brest</h3>
-          </span>
-          <span class="menu__description">
-            <p>Revisité</p>
-            <p class="menu__description--bold">18€</p>
-          </span>
-        </button>
-        <button class="btn btn--width">
-          <span class="menu__title">
-            <h3>Macaron au chocolat d'exception</h3>
-          </span>
-          <span class="menu__description">
-            <p>Et glace à la vanille de Madagascar</p>
-            <p class="menu__description--bold">22€</p>
-          </span>
-        </button>
-        <button class="btn btn--width">
-          <span class="menu__title">
-            <h3>Mousse au chocolat</h3>
-          </span>
-          <span class="menu__description">
-            <p>Au piment d'Espelette et à la truffe noire</p>
-            <p class="menu__description--bold">23€</p>
-          </span>
-        </button>
+      <section class="cards">
+        <h3 class="cards__type">Desserts</h3>
+        <div class="card">
+          <div class="card__content">
+            <div class="card__content--title">
+              <h3>Paris-Brest</h3>
+            </div>
+            <div class="card__content--description">
+              <p>revisité</p>           
+            </div>
+          </div>
+          <p class="card__bold">18€</p>
+          <input class="card__input" type="checkbox">
+          <!-- <div class="card__checked">
+          </div> -->
+        </div>
+
+        <div class="card">
+          <div class="card__content">
+            <div class="card__content--title">
+              <h3>Macaron au chocolat d'exception</h3>
+            </div>
+            <div class="card__content--description">
+              <p>Et glace à la vanille de Madagascar</p>           
+            </div>
+          </div>
+          <p class="card__bold">22€</p>
+          <input class="card__input" type="checkbox">
+          <!-- <div class="card__checked">
+          </div> -->
+        </div>
+
+        <div class="card">
+          <div class="card__content">
+            <div class="card__content--title">
+              <h3>Mousse au chocolat</h3>
+            </div>
+            <div class="card__content--description">
+              <p>Au piment d'Espelette et à la truffe noire</p>           
+            </div>
+          </div>
+          <p class="card__bold">23€</p>
+          <input class="card__input" type="checkbox">
+          <!-- <div class="card__checked">
+          </div> -->
+        </div>
       </section>
 
       <div class="btn-submit">
@@ -162,40 +183,8 @@
       </div>
 
     </div>
-    <!-- <div class="main-container2">
-      <section class="title-block">
-        <h1 class="title">La palette du goût</h1>
-        <img src="./assets/Card/Vector.svg" alt="coeur transparent">
-      </section>
-      <section class="menu">
-        <h3 class="menu__type">Entrées</h3>
-        <div class="btn btn--width">
-          <span class="menu__title">
-            <h3>Molestias quibusdam</h3>
-          </span>
-          <span class="menu__description">
-            <p>necessitatibus neque nostrum ea</p>
-            <p class="menu__description--bold">25€</p>
-          </span>
-        </div>
-      </section>
-
-      <section class="menu">
-        <h3 class="menu__type">adipisicing</h3>
-        <div class="btn btn--width">
-          <span class="menu__title">
-            <h3>Lorem ipsum dolor sit amet consectetur,</h3>
-          </span>
-          <span class="menu__description">
-            <p>Dignissimos, quos. Natus, porro voluptate</p>
-            <p class="menu__description--bold">40€</p>
-          </span>
-        </div>
-
-      </section>
-      <button class="btn--linear-gardient">Commander</button>
-    </div> -->
   </main>
+
   <footer class="footer-block">
     <h3 class="footer-block__title">ohmyfood</h3>
     <ul>

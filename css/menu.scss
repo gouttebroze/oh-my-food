@@ -83,47 +83,9 @@ ul {
 
 .title-block {
   display: flex;
+  align-items: center;
   gap: 3rem;
   margin-left: 1.7rem;
-}
-
-.menu {
-  background-color: themes.$second-background-color;
-  padding: 1rem 1.7rem;
-
-  &__type {
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    position: relative;
-  }
-
-  &__type::after {
-    content: "";
-    position: absolute;
-    width: 40px;
-    height: 3px;
-    bottom: -6px;
-    left: 0;
-    background-color: themes.$third-color;
-  }
-
-  &__title {
-    font-size: 1.8rem;
-    font-weight: 500;
-    padding-left: 1.7rem;
-  }
-
-  &__description {
-    font-size: 1.5rem;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    padding-left: 1.7rem;
-
-    &--bold {
-      font-weight: 700;
-    }
-  }
 }
 
 .cards {
@@ -148,66 +110,62 @@ ul {
 }
 
 .card {
+  @extend %shadow;
   height: 6.9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%; 
   margin-bottom: 1.2rem;
-  @extend %shadow;
-  border: none;   
   border-radius: 25px;
   font-size: 1.6rem;
   background-color: themes.$background-color;
 
-  // transition: background-color .3s;
-
-  // &:hover {
-  //   animation: slideToLeft .2s;   
-  // }
-
   &__content {  
-    // display: flex;
-    // align-items: baseline;
-    // flex-direction: column; 
-    //margin-bottom: 1.35rem;
-    padding-top: 1.35rem;
-    padding-bottom: 1.35rem;
+    padding-top: 0.35rem;
+    padding-bottom: 0.35rem;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
 
     &--title {
       font-size: 1.8rem;
       font-weight: 500;
       padding-left: 1.7rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     &--description {
       font-size: 1.5rem;
       font-weight: 300;
       padding-left: 1.7rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
       // margin-bottom: 1.35rem;
     }
   }  
   
-  &__checked {
-    display: none;
-    position: absolute;
-    color: themes.$background-color;
-    background-color: themes.$third-color;
-    padding: 2.2rem 2rem;
-    right: 0;
-    appearance: none;
-    font-weight: 900;
-    font-family: "Font Awesome 6 Free";
+  // &__checked {
+  //   display: none;
+  //   position: relative;
+  //   border-top-right-radius: 2.5rem;
+  //   border-bottom-right-radius: 2.5rem;
+  //   color: themes.$background-color;
+  //   background-color: themes.$third-color;
+  //   padding: 2rem;
+  //   right: 0;
+  //   appearance: none;
+  //   font-weight: 900;
+  //   font-family: "Font Awesome 6 Free";
 
-    &::before {
-      content: '\f00c';
-    }
-
-    // &:hover {
-    //   display: inline;
-    //   animation: slideToLeft .2s;   
-    // }
-  }
+  //   &::before {
+  //     content: '\f00c';
+  //   }
+  // }
 
   &__bold {
     font-weight: 700;
@@ -217,42 +175,43 @@ ul {
   }
 }
 
-/********************************************************************************
-        card menu animation - TODO : add "keyframes" & "transition translateX()"
-*********************************************************************************/
+/**************************************************
+        card menu animation on hover
+***************************************************/
 .card:hover .card__checked {
   display: block;
+  height: 3rem;
+  // transform: translateX(-60px);
+  // transition: all .3s ease-in-out;
+  width: 2rem;
+  animation: slideIn .5s forwards;
+  position: absolute;
 }
 
-.card__input {
-  display: none;
-  appearance: none;
-  font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+// .card__input {
+//   display: none;
+//   appearance: none;
+//   font-weight: 900;
+//   font-family: "Font Awesome 6 Free";
 
-  &::before {
-    content: '\f00c';  
-  }
-}
+//   &::before {
+//     content: '\f00c';  
+//   }
+// }
 
 .btn--linear-gardient {
+  @include themes.linear-gardient-primary;
   @extend .btn;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: rgb(147, 86, 220);
-  background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-  background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
   color: themes.$background-color;
   width: 218px;
   height: 50px;
 
   &:hover {
-    /* todo */
-    background: themes.$primary-color;
+    @include themes.linear-gardient-secondary;
   }
 }
 
@@ -292,15 +251,67 @@ ul {
   }
 }
 
-@keyframes slideToLeft {
-  from {
+/*******************************************************************
+        Heart / Like icon animation on hover / on checked
+********************************************************************/
+.like-input {
+  -webkit-appearance: none;
+	cursor: pointer;
+  height: 100%;
+	position: absolute;
+	width: 100%;
+  appearance: none;
+  font-weight: 400;
+  font-family: "Font Awesome 6 Free";
+
+  &::before {
+    // content: '\f004';  
+    // content: url(../assets/color-heart/Vector.svg);
+    content: url(../assets/Card/Vector.svg);
+    display: block;
+    position: absolute;
+    height: 70%;
+    width: 85%;
+  }
+
+  // &:hover::before {
+  //     animation: heartcolor .3s;
+  // }
+
+  &::after {
+    background: url(../assets/Card/Vector.svg);
+    content: "";
+    height: 25px;
+    opacity: 0.6;
+    position: absolute;
+    width: 25px;
+  }
+
+  &:checked::after {
+    opacity: 1;
+    background: url(../assets/color-heart/Vector.svg);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    // opacity: 0;
     transform: translateX(0);
-    background-color: inherit;
+    transform-origin: left;
     right: 0;
   }
+  100% {
+    // opacity: 1;
+    transform: translateX(-20px);
+    right: 20px;
+  }
+}
+
+@keyframes slideBold {
+  from {
+    margin-right: 0;
+  }
   to {
-    transform: translateX(-60px);
-    background-color: themes.$third-color;
-    right: 50px;
+    margin-right: 6rem;
   }
 }

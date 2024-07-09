@@ -109,19 +109,19 @@ ul {
   }
 
   &__title {
+    display: inline-block;
     font-size: 1.8rem;
     font-weight: 500;
-    padding-left: 1.7rem;
-    /* padding: 12px 47px 5px 15px */
-    ;
+    padding: 0 1.7rem;
   }
 
   &__description {
+    display: inline-block;
     font-size: 1.5rem;
     font-weight: 300;
     display: flex;
-    justify-content: center;
-    padding-left: 1.7rem;
+    justify-content: space-between;
+    padding: 0 1.7rem;
 
     &--bold {
       font-weight: 700;
@@ -194,5 +194,81 @@ ul {
 
   span {
     padding-left: 7px;
+  }
+}
+
+/**************************************************
+      loader with stagger circles - animation
+***************************************************/
+.section-loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  // margin-right: 45px;
+  margin-top: 35px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  &-stagger-circles {
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #000;
+    animation: spin 1000ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    // animation-play-state: running;
+    // animation-play-state: paused;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      bottom: 5px;
+      right: 5px;
+      border: 3px solid transparent;
+      border-top-color: #4b4949;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: spin 5s linear infinite; /* drive the stagger between cercles */
+      
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      bottom: 12px;
+      right: 12px;
+      border: 3px solid transparent;
+      border-top-color: #4b4949;
+      border-radius: 50%;
+      opacity: 0.5; /* dicrease opacity towards the center */
+      animation: spin 10s linear infinite; /* drive the stagger between cercles */
+    }
+  }
+}
+
+.start-loader {
+  animation-play-state: running;
+}
+
+.stop-loader {
+  animation-play-state: paused;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
   }
 }
