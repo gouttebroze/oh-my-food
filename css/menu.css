@@ -3,6 +3,11 @@
   font-family: "Roboto", sans-serif;
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
@@ -111,6 +116,17 @@ ul {
   border-radius: 25px;
   font-size: 1.6rem;
   background-color: #FFF;
+  overflow: hidden;
+}
+.card__check {
+  background-color: green;
+  width: 60px;
+  height: 100%;
+  margin-right: -60px;
+  transition: margin 500ms;
+}
+.card:hover .card__check {
+  margin-right: 0;
 }
 .card__content {
   padding-top: 0.35rem;
@@ -205,54 +221,4 @@ ul {
 
 /*******************************************************************
         Heart / Like icon animation on hover / on checked
-********************************************************************/
-.like-input {
-  -webkit-appearance: none;
-  cursor: pointer;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  -moz-appearance: none;
-       appearance: none;
-  font-weight: 400;
-  font-family: "Font Awesome 6 Free";
-}
-.like-input::before {
-  content: url(../assets/Card/Vector.svg);
-  display: block;
-  position: absolute;
-  height: 70%;
-  width: 85%;
-}
-.like-input::after {
-  background: url(../assets/Card/Vector.svg);
-  content: "";
-  height: 25px;
-  opacity: 0.6;
-  position: absolute;
-  width: 25px;
-}
-.like-input:checked::after {
-  opacity: 1;
-  background: url(../assets/color-heart/Vector.svg);
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(0);
-    transform-origin: left;
-    right: 0;
-  }
-  100% {
-    transform: translateX(-20px);
-    right: 20px;
-  }
-}
-@keyframes slideBold {
-  from {
-    margin-right: 0;
-  }
-  to {
-    margin-right: 6rem;
-  }
-}/*# sourceMappingURL=menu.css.map */
+********************************************************************//*# sourceMappingURL=menu.css.map */
