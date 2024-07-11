@@ -81,16 +81,25 @@ ul {
   top: -30px
 }
 
-.title-block {
+.title-block { 
   display: flex;
   align-items: center;
   gap: 3rem;
+
+  h1 {
   margin-left: 1.7rem;
+  padding-top: 3.2rem;
+  padding-bottom: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem;
+}
 }
 
 .cards {
   background-color: themes.$second-background-color;
   padding: 1rem 1.7rem;
+
+
   
   &__type {
     text-transform: uppercase;
@@ -109,7 +118,6 @@ ul {
   }
 }
 
-
 .card {
   @extend %shadow;
   height: 6.9rem;
@@ -117,12 +125,17 @@ ul {
   justify-content: space-between;
   align-items: center;
   width: 100%; 
+  margin-top: 1.2rem;
   margin-bottom: 1.2rem;
   border-radius: 25px;
   font-size: 1.6rem;
   background-color: themes.$background-color;
   overflow: hidden;
-
+  // padding: 1.2rem 0 1.2rem 1.5rem;
+   
+/*********************************** 
+*** menu cards animated on hover *** 
+************************************/
   &__check {
     background-color: themes.$third-color;
     display: flex;
@@ -141,12 +154,13 @@ ul {
   }
 
   &__content {  
-    padding-top: 0.35rem;
-    padding-bottom: 0.35rem;
+    padding: 1.2rem 0 1.2rem 1.5rem;
     white-space: nowrap;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
     &--title {
       font-size: 1.8rem;
@@ -155,6 +169,7 @@ ul {
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden;
+      padding-bottom: 0.5rem;
     }
 
     &--description {
@@ -166,33 +181,18 @@ ul {
       overflow: hidden;
       // margin-bottom: 1.35rem;
     }
+
+    &--price {
+      display: flex;
+    }
   }  
   
-  // &__checked {
-  //   display: none;
-  //   position: relative;
-  //   border-top-right-radius: 2.5rem;
-  //   border-bottom-right-radius: 2.5rem;
-  //   color: themes.$background-color;
-  //   background-color: themes.$third-color;
-  //   padding: 2rem;
-  //   right: 0;
-  //   appearance: none;
-  //   font-weight: 900;
-  //   font-family: "Font Awesome 6 Free";
+}
 
-  //   &::before {
-  //     content: '\f00c';
-  //   }
-  // }
-
-  &__bold {
+.bold {
     font-weight: 700;
     padding: 3.75rem 1.35rem 1.3rem 0;
-    margin-top: 0;
-    margin-bottom: 0;
   }
-}
 
 .fa-check {
   background-color: themes.$background-color;  
@@ -204,29 +204,9 @@ ul {
   padding: 5px 3px 0 3px;
 }
 
-// .card:hover .card__checked {
-//   display: block;
-//   height: 3rem;
-//   // transform: translateX(-60px);
-//   // transition: all .3s ease-in-out;
-//   width: 2rem;
-//   animation: slideIn .5s forwards;
-//   position: absolute;
-// }
-
-// .card__input {
-//   display: none;
-//   appearance: none;
-//   font-weight: 900;
-//   font-family: "Font Awesome 6 Free";
-
-//   &::before {
-//     content: '\f00c';  
-//   }
-// }
-
 .btn--linear-gardient {
-  @include themes.linear-gardient-primary;
+  //@include themes.linear-gardient-primary;
+  //background-color: black;
   @extend .btn;
   display: flex;
   justify-content: center;
@@ -235,9 +215,19 @@ ul {
   color: themes.$background-color;
   width: 218px;
   height: 50px;
+  // transition: background-color .3s;
+  background: rgb(147, 86, 220);
+  background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+  background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
 
   &:hover {
-    @include themes.linear-gardient-secondary;
+    // @include themes.linear-gardient-secondary;
+    // background-color: red;
+    animation: btn-animated .5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
   }
 }
 
@@ -259,6 +249,7 @@ ul {
   &__title {
     font-family: "Shrikhand", serif;
     font-size: 1.8rem;
+    font-weight: 400;
     padding-left: 2.5rem;
     padding-top: 2.2rem;
     margin-top: 0;
@@ -333,11 +324,25 @@ ul {
 //   }
 // }
 
-// @keyframes slideBold {
-//   from {
-//     margin-right: 0;
-//   }
-//   to {
-//     margin-right: 6rem;
-//   }
-// }
+@keyframes btn-animated {
+  from {
+    background: rgb(147, 86, 220);
+    background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 6px themes.$shadow-color;
+    -webkit-box-shadow: 0px 10px 12px 0px themes.$shadow-color;
+    -moz-box-shadow: 0px 10px 12px 0px themes.$shadow-color;
+  } 
+  to {
+    background: rgb(168, 127, 218);
+    background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 12px themes.$shadow-color;
+    -webkit-box-shadow: 0px 10px 12px 10px themes.$shadow-color;
+    -moz-box-shadow: 0px 10px 12px 10px themes.$shadow-color;
+  }
+}

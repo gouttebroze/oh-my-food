@@ -1,5 +1,8 @@
 @import "./css_reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/*******************************
+*   button animated on hover   *
+********************************/
 @font-face {
   font-family: "Roboto", sans-serif;
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
@@ -80,7 +83,13 @@ ul {
   display: flex;
   align-items: center;
   gap: 3rem;
+}
+.title-block h1 {
   margin-left: 1.7rem;
+  padding-top: 3.2rem;
+  padding-bottom: 4rem;
+  font-weight: 400;
+  font-size: 2.8rem;
 }
 
 .cards {
@@ -108,11 +117,15 @@ ul {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin-top: 1.2rem;
   margin-bottom: 1.2rem;
   border-radius: 25px;
   font-size: 1.6rem;
   background-color: #FFF;
   overflow: hidden;
+  /*********************************** 
+  *** menu cards animated on hover *** 
+  ************************************/
 }
 .card__check {
   background-color: #99E2D0;
@@ -128,11 +141,12 @@ ul {
   margin-right: 0;
 }
 .card__content {
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
+  padding: 1.2rem 0 1.2rem 1.5rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .card__content--title {
   font-size: 1.8rem;
@@ -141,6 +155,7 @@ ul {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  padding-bottom: 0.5rem;
 }
 .card__content--description {
   font-size: 1.5rem;
@@ -150,11 +165,13 @@ ul {
   white-space: nowrap;
   overflow: hidden;
 }
-.card__bold {
+.card__content--price {
+  display: flex;
+}
+
+.bold {
   font-weight: 700;
   padding: 3.75rem 1.35rem 1.3rem 0;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .fa-check {
@@ -168,9 +185,6 @@ ul {
 }
 
 .btn--linear-gardient {
-  background: rgb(147, 86, 220);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,11 +192,14 @@ ul {
   color: #FFF;
   width: 218px;
   height: 50px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
 }
 .btn--linear-gardient:hover {
-  background: rgb(168, 127, 218);
-  background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+  animation: btn-animated 0.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
 }
 
 .btn--width {
@@ -203,6 +220,7 @@ ul {
 .footer-block__title {
   font-family: "Shrikhand", serif;
   font-size: 1.8rem;
+  font-weight: 400;
   padding-left: 2.5rem;
   padding-top: 2.2rem;
   margin-top: 0;
@@ -219,4 +237,22 @@ ul {
 
 /*******************************************************************
         Heart / Like icon animation on hover / on checked
-********************************************************************//*# sourceMappingURL=menu.css.map */
+********************************************************************/
+@keyframes btn-animated {
+  from {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    background: rgb(168, 127, 218);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+  }
+}/*# sourceMappingURL=menu.css.map */
