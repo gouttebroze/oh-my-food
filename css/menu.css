@@ -1,13 +1,9 @@
+@import "./css_reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @font-face {
   font-family: "Roboto", sans-serif;
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
 }
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
@@ -119,7 +115,10 @@ ul {
   overflow: hidden;
 }
 .card__check {
-  background-color: green;
+  background-color: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 100%;
   margin-right: -60px;
@@ -158,15 +157,14 @@ ul {
   margin-bottom: 0;
 }
 
-/**************************************************
-        card menu animation on hover
-***************************************************/
-.card:hover .card__checked {
-  display: block;
-  height: 3rem;
+.fa-check {
+  background-color: #FFF;
+  color: #99E2D0;
+  border-radius: 50%;
   width: 2rem;
-  animation: slideIn 0.5s forwards;
-  position: absolute;
+  height: 2rem;
+  text-align: center;
+  padding: 5px 3px 0 3px;
 }
 
 .btn--linear-gardient {

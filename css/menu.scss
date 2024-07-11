@@ -1,13 +1,9 @@
 @use "./themes.scss";
+@import "./css_reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
 @font-face {
   font-family: "Roboto", sans-serif;
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
-}
-* {
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -128,7 +124,10 @@ ul {
   overflow: hidden;
 
   &__check {
-    background-color: green;
+    background-color: themes.$third-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60px;
     height: 100%;
     margin-right: -60px;
@@ -195,18 +194,25 @@ ul {
   }
 }
 
-/**************************************************
-        card menu animation on hover
-***************************************************/
-.card:hover .card__checked {
-  display: block;
-  height: 3rem;
-  // transform: translateX(-60px);
-  // transition: all .3s ease-in-out;
+.fa-check {
+  background-color: themes.$background-color;  
+  color: themes.$third-color;
+  border-radius: 50%;
   width: 2rem;
-  animation: slideIn .5s forwards;
-  position: absolute;
+  height: 2rem;
+  text-align: center;
+  padding: 5px 3px 0 3px;
 }
+
+// .card:hover .card__checked {
+//   display: block;
+//   height: 3rem;
+//   // transform: translateX(-60px);
+//   // transition: all .3s ease-in-out;
+//   width: 2rem;
+//   animation: slideIn .5s forwards;
+//   position: absolute;
+// }
 
 // .card__input {
 //   display: none;

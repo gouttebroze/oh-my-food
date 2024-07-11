@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "./css_reset.css";
 /* pr écran large type desktop */
 /* "fontawesome" files required to use "regular" & "solid" types icons  */
 /*!
@@ -8334,10 +8335,6 @@ readers do not read off random characters that represent icons */
   font-weight: 900;
 }
 
-/* * {
-  padding: 0;
-  margin: 0;
-} */
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;

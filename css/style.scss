@@ -1,5 +1,6 @@
 @use "./themes.scss";
 @use "./base.scss";
+@import "./css_reset.css";
 @import "./responsive.scss";
 
 /* "fontawesome" files required to use "regular" & "solid" types icons  */
@@ -8,11 +9,6 @@
 @import "./solid.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
-/* * {
-  padding: 0;
-  margin: 0;
-} */
 
 html {
   font-size: 62.5%;

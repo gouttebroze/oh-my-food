@@ -1,6 +1,6 @@
 @use "./themes.scss";
+@import "./css_reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-
 @font-face {
   font-family: "Roboto", sans-serif;
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
