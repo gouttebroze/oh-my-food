@@ -41,42 +41,73 @@ $shadow-color: rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 10px 12px 0px $color;
 }
 
-/*******************************
-*   button animated on hover   *
-********************************/
-// %shadow {
-//   box-shadow: 0px 10px 6px $shadow-color;
-//   -webkit-box-shadow: 0px 10px 12px 0px $shadow-color;
-//   -moz-box-shadow: 0px 10px 12px 0px $shadow-color;
-// }
+%shadow {
+  box-shadow: 0px 10px 6px $shadow-color;
+  -webkit-box-shadow: 0px 10px 12px 0px $shadow-color;
+  -moz-box-shadow: 0px 10px 12px 0px $shadow-color;
+}
+/*********************************************
+*  linear-gardient button animated on hover 
+*  using @keyframes  
+**********************************************/
+.btn {
+  font-size: 1.6rem;
+  @extend %shadow;
+  border: none;
+  border-radius: 25px;
+  /* changed only on "menu" pages */
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+  /* margin-left: 1.3rem;
+  margin-right: 1.3rem; */
+}
 
-// .btn {
-//   font-size: 1.6rem;
-//   @extend %shadow;
-//   border: none;
-//   border-radius: 25px;
-//   /* changed only on "menu" pages */
-//   background-color: $background-color;
-//   display: flex;
-//   flex-direction: column;
-//   margin-bottom: 1.2rem;
-//   /* margin-left: 1.3rem;
-//   margin-right: 1.3rem; */
-// }
+.btn--linear-gardient {
+  @extend .btn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: $background-color;
+  width: 218px;
+  height: 50px;
+  // transition: background-color .3s;
+  background: rgb(147, 86, 220);
+  background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+  background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
 
-// @mixin btn-initial-state {
-//   @include linear-gardient-primary;
-//   @extend .btn;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   cursor: pointer;
-//   color: $background-color;
-//   width: 218px;
-//   height: 50px;
-//   transition: background-color , filter .3s;
-// }  
+  &:hover {
+    // @include themes.linear-gardient-secondary;
+    // background-color: red;
+    animation: btn-animated .5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+  }
+}
 
-// @mixin btn-hover-state {
-//   background-color: #fff;
-// }
+@keyframes btn-animated {
+  from {
+    background: rgb(147, 86, 220);
+    background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 6px $shadow-color;
+    -webkit-box-shadow: 0px 10px 12px 0px $shadow-color;
+    -moz-box-shadow: 0px 10px 12px 0px $shadow-color;
+  } 
+  to {
+    background: rgb(168, 127, 218);
+    background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 12px $shadow-color;
+    -webkit-box-shadow: 0px 10px 12px 10px $shadow-color;
+    -moz-box-shadow: 0px 10px 12px 10px $shadow-color;
+  }
+}
