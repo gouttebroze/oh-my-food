@@ -1,5 +1,182 @@
 @charset "UTF-8";
 @import "./css_reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.btn, .card__list, .card__btn, .btn, .btn--linear-gardient {
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*********************************************
+*  linear-gardient button animated on hover 
+*  using @keyframes  
+**********************************************/
+.btn, .card__btn, .btn--linear-gardient {
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 25px;
+  /* changed only on "menu" pages */
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+  /* margin-left: 1.3rem;
+  margin-right: 1.3rem; */
+}
+
+.btn--linear-gardient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  width: 218px;
+  height: 50px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+}
+.btn--linear-gardient:hover {
+  animation: btn-animated 0.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btn-animated {
+  from {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    background: rgb(168, 127, 218);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.card__list, .btn, .card__btn, .btn--linear-gardient {
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*********************************************
+*  linear-gardient button animated on hover 
+*  using @keyframes  
+**********************************************/
+.btn, .card__btn, .btn--linear-gardient {
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 25px;
+  /* changed only on "menu" pages */
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+  /* margin-left: 1.3rem;
+  margin-right: 1.3rem; */
+}
+
+.btn--linear-gardient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  width: 218px;
+  height: 50px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+}
+
+.btn--linear-gardient:hover {
+  animation: btn-animated 0.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btn-animated {
+  from {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    background: rgb(168, 127, 218);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-block__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.header-block__top--logo {
+  width: 40vh;
+  margin: 2rem 4rem;
+}
+.header-block__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 231px;
+}
+
+.home-header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 6.3rem;
+}
+.home-header-block .logo {
+  width: auto;
+  height: 3.6rem;
+  margin: 2rem 4rem;
+}
+
+.footer-block {
+  background-color: #353535;
+  color: white;
+  padding-bottom: 2.2rem;
+}
+.footer-block__title {
+  font-family: "Shrikhand", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-left: 2.5rem;
+  padding-top: 2.2rem;
+  margin-top: 0;
+}
+.footer-block ul {
+  padding-left: 2.5rem;
+}
+.footer-block li {
+  font-size: 1.6rem;
+}
+.footer-block span {
+  padding-left: 7px;
+}
+
 /* pr écran large type desktop */
 /* "fontawesome" files required to use "regular" & "solid" types icons  */
 /*!
@@ -7,62 +184,6 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  * Copyright 2024 Fonticons, Inc.
  */
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.header-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.header-block .logo {
-  width: 40vh;
-  margin: 2rem 4rem;
-}
-
-/* %shadow {
-  box-shadow: 0px 10px 6px $shadow-color;
-  -webkit-box-shadow: 0px 10px 12px 0px $shadow-color;
-  -moz-box-shadow: 0px 10px 12px 0px $shadow-color;
-}
-
-.btn {
-  @extend %shadow;
-  border: none;
-  font-size: 1.6rem;
-  font-weight: 500;
-  height: 50px;
-  border-radius: 25px;
-  cursor: pointer; 
-} 
-
-.btn--width {
-  width: 100%;
-}
-
-.btn--linear-gardient {
-  @extend .btn;
-  background: rgb(147,86,220);
-  background: -moz-linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-  background: -webkit-linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-  background: linear-gradient(0deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-  color: white;
-  width: 218px;
-  &:hover {
-    background: $primary-color;
-  }
-}
-
-.footer-block {
-  background-color: $dark-color;
-  color: white;
-}
-
-.footer-title {
-  font-family: "Shrikhand", serif;
-  font-size: 1.8rem;
-  padding-left: 2.5rem;
-  padding-top: 2.2rem;
-} */
 .fa {
   font-family: var(--fa-style-family, "Font Awesome 6 Free");
   font-weight: var(--fa-style, 900);
@@ -8340,7 +8461,7 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-.btn, .card__btn, .btn--linear-gardient {
+.card__list, .btn, .card__btn {
   box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
@@ -8351,7 +8472,7 @@ a {
   text-decoration: none;
 }
 
-.btn, .card__btn, .btn--linear-gardient {
+.btn, .card__btn {
   border: none;
   font-size: 1.6rem;
   font-weight: 500;
@@ -8366,16 +8487,6 @@ a {
   display: inline-block;
 }
 
-.header-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.header-block .logo {
-  width: 40vh;
-  margin: 2rem 4rem;
-}
-
 .main-container {
   background-color: rgb(246, 246, 246);
   padding-bottom: 6.6rem;
@@ -8383,6 +8494,7 @@ a {
 
 .location {
   width: 100%;
+  height: 5rem;
   display: flex;
   align-items: center;
   /* to center icon & title on vertical axe */
@@ -8390,7 +8502,7 @@ a {
   /* to center icon & title on horizontal axe */
   -moz-column-gap: 20px;
        column-gap: 20px;
-  background-color: rgb(234, 234, 234);
+  background-color: rgb(246, 246, 246);
   box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
@@ -8405,43 +8517,32 @@ a {
 }
 
 .hero {
-  margin-top: 1rem;
+  margin-top: 3.9rem;
+  margin-bottom: 4.5rem;
   text-align: center;
   background-color: rgb(246, 246, 246);
 }
 .hero__title {
   text-align: center;
   font-size: 2.4rem;
-  margin-top: 5.7rem;
-  padding-right: 2.6rem;
-  padding-left: 3.4rem;
+  padding-right: 2.9rem;
+  padding-left: 3.8rem;
 }
 .hero__subtitle {
   text-align: center;
   font-size: 1.8rem;
   font-weight: 300;
-  padding-right: 4.2rem;
-  padding-left: 4.2rem;
-  padding-bottom: 1.6rem;
+  padding: 1.7rem 2.2rem 2.9rem 2.2rem;
 }
 
-.btn--linear-gardient {
-  background: rgb(147, 86, 220);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-  color: #FFF;
-  width: 218px;
-  height: 5rem;
-}
-.btn--linear-gardient:hover {
-  background: rgb(168, 127, 218);
-  background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+.btn__block {
+  display: flex;
+  justify-content: center;
 }
 
 .fonctionnement {
-  background-color: #FFF;
-  margin-top: 5.7rem;
+  background-color: rgb(255, 255, 255);
+  padding-top: 2.8rem;
   display: flex;
   flex-direction: column;
   padding-bottom: 6.8rem;
@@ -8449,17 +8550,35 @@ a {
 .fonctionnement__title {
   font-size: 2.4rem;
   padding-top: 2.5rem;
-  padding-bottom: 0;
+  padding-bottom: 2.6rem;
   margin-left: 2rem;
 }
 .fonctionnement__content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
-.btn--width {
+.card__list {
+  background-color: rgb(246, 246, 246);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  height: 7.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.card__list--icon {
+  padding-right: 3rem;
+}
+.card__list--text {
+  display: inline-block;
 }
 
 ul,
@@ -8485,7 +8604,7 @@ ol li::before {
   border-radius: 50%;
   display: inline-block;
   line-height: 2rem;
-  color: #FFF;
+  color: rgb(255, 255, 255);
   text-align: center;
   margin-right: 0.5rem;
   /* to move circles positions */
@@ -8511,7 +8630,7 @@ ol li::before {
   flex-direction: column;
   position: relative;
   border-radius: 15px;
-  background-color: #FFF;
+  background-color: rgb(255, 255, 255);
   margin: 0 17px;
 }
 .card__btn {
@@ -8589,30 +8708,6 @@ ol li::before {
   background: url(../assets/color-heart/Vector.svg);
 }
 
-.footer-block {
-  background-color: #353535;
-  color: #FFF;
-  padding-bottom: 2.2rem;
-}
-.footer-block__title {
-  font-family: "Shrikhand", serif;
-  font-size: 1.8rem;
-  padding-left: 2.5rem;
-  padding-top: 2.2rem;
-  margin-top: 0;
-}
-.footer-block ul {
-  padding-left: 2.5rem;
-}
-.footer-block li {
-  font-size: 1.6rem;
-  padding-bottom: 0.7rem;
-}
-.footer-block .footer-link {
-  padding-left: 1.1rem;
-  padding-bottom: 0.7rem;
-}
-
 /*
 @keyframes heartColor {
   from {
@@ -8630,7 +8725,7 @@ ol li::before {
 } */
 .wrapper__icon {
   font-size: 1.2rem;
-  color: #FFF;
+  color: rgb(255, 255, 255);
 }
 
 .wrapper__icon--like {

@@ -1,8 +1,169 @@
 @import "./css_reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-/*******************************
-*   button animated on hover   *
-********************************/
+.btn, .card, .btn--linear-gardient {
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*********************************************
+*  linear-gardient button animated on hover 
+*  using @keyframes  
+**********************************************/
+.btn, .btn--linear-gardient {
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 25px;
+  /* changed only on "menu" pages */
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+  /* margin-left: 1.3rem;
+  margin-right: 1.3rem; */
+}
+
+.btn--linear-gardient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #FFF;
+  width: 218px;
+  height: 50px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+}
+.btn--linear-gardient:hover {
+  animation: btn-animated 0.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btn-animated {
+  from {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    background: rgb(168, 127, 218);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.card, .btn, .btn--linear-gardient {
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+/*********************************************
+*  linear-gardient button animated on hover 
+*  using @keyframes  
+**********************************************/
+.btn, .btn--linear-gardient {
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 25px;
+  /* changed only on "menu" pages */
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+  /* margin-left: 1.3rem;
+  margin-right: 1.3rem; */
+}
+
+.btn--linear-gardient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #FFF;
+  width: 218px;
+  height: 50px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+}
+
+.btn--linear-gardient:hover {
+  animation: btn-animated 0.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes btn-animated {
+  from {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    background: rgb(168, 127, 218);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-block__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.header-block__top--logo {
+  width: 40vh;
+  margin: 2rem 4rem;
+}
+.header-block__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 231px;
+}
+
+.footer-block {
+  background-color: #353535;
+  color: white;
+  padding-bottom: 2.2rem;
+}
+.footer-block__title {
+  font-family: "Shrikhand", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-left: 2.5rem;
+  padding-top: 2.2rem;
+  margin-top: 0;
+}
+.footer-block ul {
+  padding-left: 2.5rem;
+}
+.footer-block li {
+  font-size: 1.6rem;
+}
+.footer-block span {
+  padding-left: 7px;
+}
+
 @font-face {
   font-family: "Roboto", sans-serif;
   src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
@@ -28,13 +189,13 @@ ul {
   /* font-weight: 400; */
 }
 
-.card, .btn, .btn--linear-gardient {
+.card, .btn {
   box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
 }
 
-.btn, .btn--linear-gardient {
+.btn {
   font-size: 1.6rem;
   border: none;
   border-radius: 25px;
@@ -45,28 +206,6 @@ ul {
   margin-bottom: 1.2rem;
   /* margin-left: 1.3rem;
   margin-right: 1.3rem; */
-}
-
-.header-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.header-block__top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-.header-block__top--logo {
-  width: 40vh;
-  margin: 2rem 4rem;
-}
-.header-block__image {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 231px;
 }
 
 .main-container {
@@ -184,24 +323,6 @@ ul {
   padding: 5px 3px 0 3px;
 }
 
-.btn--linear-gardient {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: #FFF;
-  width: 218px;
-  height: 50px;
-  background: rgb(147, 86, 220);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-}
-.btn--linear-gardient:hover {
-  animation: btn-animated 0.5s;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-}
-
 .btn--width {
   width: 100%;
 }
@@ -212,47 +333,6 @@ ul {
   margin-top: 4rem;
 }
 
-.footer-block {
-  background-color: #353535;
-  color: white;
-  padding-bottom: 2.2rem;
-}
-.footer-block__title {
-  font-family: "Shrikhand", serif;
-  font-size: 1.8rem;
-  font-weight: 400;
-  padding-left: 2.5rem;
-  padding-top: 2.2rem;
-  margin-top: 0;
-}
-.footer-block ul {
-  padding-left: 2.5rem;
-}
-.footer-block li {
-  font-size: 1.6rem;
-}
-.footer-block span {
-  padding-left: 7px;
-}
-
 /*******************************************************************
         Heart / Like icon animation on hover / on checked
-********************************************************************/
-@keyframes btn-animated {
-  from {
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
-  }
-  to {
-    background: rgb(168, 127, 218);
-    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
-  }
-}/*# sourceMappingURL=menu.css.map */
+********************************************************************//*# sourceMappingURL=menu.css.map */

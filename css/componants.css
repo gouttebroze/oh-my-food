@@ -13,7 +13,7 @@
   border: none;
   border-radius: 25px;
   /* changed only on "menu" pages */
-  background-color: rgb(255, 255, 255);
+  background-color: #FFF;
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;
@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: #FFF;
   width: 218px;
   height: 50px;
   background: rgb(147, 86, 220);
@@ -56,4 +56,48 @@
     -webkit-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
   }
-}/*# sourceMappingURL=themes.css.map */
+}
+.header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-block__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.header-block__top--logo {
+  width: 40vh;
+  margin: 2rem 4rem;
+}
+.header-block__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 231px;
+}
+
+.footer-block {
+  background-color: #353535;
+  color: white;
+  padding-bottom: 2.2rem;
+}
+.footer-block__title {
+  font-family: "Shrikhand", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-left: 2.5rem;
+  padding-top: 2.2rem;
+  margin-top: 0;
+}
+.footer-block ul {
+  padding-left: 2.5rem;
+}
+.footer-block li {
+  font-size: 1.6rem;
+}
+.footer-block span {
+  padding-left: 7px;
+}/*# sourceMappingURL=componants.css.map */

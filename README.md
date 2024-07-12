@@ -119,3 +119,11 @@ customElements.define('spinning-dots', SpinningDots)
 * La règle `@use` permet de charger les variables, mixins & fonctions, les partager & les réutiliser sans dupliquer de code entre différents fichiers `scss`.
 
 * Pour en savoir **+**, voir la doc. de `sass` [ici](https://sass-lang.com/documentation/at-rules/use/).
+
+## TODO
+
+* Avec Sass, la directive @import permet d’importer durant la compilation le contenu d’un fichier SCSS dans un autre fichier SCSS.
+Il est inutile de préciser l’extension du fichier importé à Sass.
+Une feuille partielle ou partial, dont le nom commence par un underscore, est un fichier qui a uniquement vocation à être importé dans d’autres feuilles de styles. Aucun fichier CSS n’est généré pour lui à la compilation.
+
+* créer des "partials" avec un underscore (_).

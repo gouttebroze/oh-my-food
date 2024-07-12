@@ -1,5 +1,5 @@
 @use "./themes.scss";
-@use "./base.scss";
+@import "./partials/componants";
 @import "./css_reset.css";
 @import "./responsive.scss";
 
@@ -44,16 +44,16 @@ a {
   }
 }
 
-.header-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+// .home-header-block {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
 
-  .logo {
-    width: 40vh;
-    margin: 2rem 4rem;
-  }
-}
+//   .logo {
+//     width: 40vh;
+//     margin: 2rem 4rem;
+//   }
+// }
 
 .main-container {
   background-color: themes.$second-background-color;
@@ -62,13 +62,14 @@ a {
 
 .location {
   width: 100%;
+  height: 5rem;
   display: flex;
   align-items: center;
   /* to center icon & title on vertical axe */
   justify-content: center;
   /* to center icon & title on horizontal axe */
   column-gap: 20px;
-  background-color: rgba(234, 234, 234, 1);
+  background-color: themes.$second-background-color;
   box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
@@ -85,43 +86,46 @@ a {
 }
 
 .hero {
-  margin-top: 1rem;
+  margin-top: 3.9rem;
+  margin-bottom: 4.5rem;
   text-align: center;
   background-color: themes.$second-background-color;
 
   &__title {
     text-align: center;
     font-size: 2.4rem;
-    margin-top: 5.7rem;
-    padding-right: 2.6rem;
-    padding-left: 3.4rem;
+    padding-right: 2.9rem;
+    padding-left: 3.8rem;
   }
 
   &__subtitle {
     text-align: center;
     font-size: 1.8rem;
     font-weight: 300;
-    padding-right: 4.2rem;
-    padding-left: 4.2rem;
-    padding-bottom: 1.6rem;
+    padding: 1.7rem 2.2rem 2.9rem 2.2rem;
   }
 }
 
-.btn--linear-gardient {
-  @include themes.linear-gardient-primary;
-  @extend .btn;
-  color: themes.$background-color;
-  width: 218px;
-  height: 5rem;
-
-  &:hover {
-    @include themes.linear-gardient-secondary;
-  }
+.btn__block {
+  display: flex;
+  justify-content: center;
 }
+
+// .btn--linear-gardient {
+//   @include themes.linear-gardient-primary;
+//   @extend .btn;
+//   color: themes.$background-color;
+//   width: 218px;
+//   height: 5rem;
+
+//   &:hover {
+//     @include themes.linear-gardient-secondary;
+//   }
+// }
 
 .fonctionnement {
   background-color: themes.$background-color;
-  margin-top: 5.7rem;
+  padding-top: 2.8rem;
   display: flex;
   flex-direction: column;
   padding-bottom: 6.8rem;
@@ -129,7 +133,7 @@ a {
   &__title {
     font-size: 2.4rem;
     padding-top: 2.5rem;
-    padding-bottom: 0;
+    padding-bottom: 2.6rem;
     margin-left: 2rem;
   }
 
@@ -137,12 +141,32 @@ a {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 }
 
-.btn--width {
-  width: 100%;
+.card__list {
+  background-color: themes.$second-background-color;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend %shadow;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  height: 7.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+
+  &--icon {
+    padding-right: 3rem;
+  }
+
+  &--text {
+    display: inline-block;
+  }
 }
 
 ul,
@@ -291,37 +315,37 @@ ol {
   }
 }
 
-.footer-block {
-  background-color: themes.$dark-color;
-  color: themes.$background-color;
-  padding-bottom: 2.2rem;
+// .footer-block {
+//   background-color: themes.$dark-color;
+//   color: themes.$background-color;
+//   padding-bottom: 2.2rem;
 
-  &__title {
-    font-family: "Shrikhand", serif;
-    font-size: 1.8rem;
-    padding-left: 2.5rem;
-    padding-top: 2.2rem;
-    margin-top: 0;
-  }
+//   &__title {
+//     font-family: "Shrikhand", serif;
+//     font-size: 1.8rem;
+//     padding-left: 2.5rem;
+//     padding-top: 2.2rem;
+//     margin-top: 0;
+//   }
 
-  ul {
-    padding-left: 2.5rem;
-  }
+//   ul {
+//     padding-left: 2.5rem;
+//   }
 
-  li {
-    font-size: 1.6rem;
-    padding-bottom: 0.7rem;
-  }
+//   li {
+//     font-size: 1.6rem;
+//     padding-bottom: 0.7rem;
+//   }
 
-  .footer-link {
-    padding-left: 1.1rem;
-    padding-bottom: 0.7rem;
-  }
+//   .footer-link {
+//     padding-left: 1.1rem;
+//     padding-bottom: 0.7rem;
+//   }
 
-  // span {
-  //   padding-left: 7px;
-  // }
-}
+//   // span {
+//   //   padding-left: 7px;
+//   // }
+// }
 
 /*
 @keyframes heartColor {
