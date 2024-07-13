@@ -7,16 +7,40 @@
   * Texte: ``Roboto`` (police téléchargable [ici](https://www.fontsquirrel.com/fonts/roboto))
 
 * **Couleurs**:
-  * Primaire: ``#9356DC`` 
+  * Primaire: ``#9356DC``
   * Secondaire: ``#FF79DA``
   * Tertiaire: ``#99E2D0``
 
+  * **Linear-gardient & box-shadow**:
 
+  ```css
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  ```
+
+  * **Linear-gardient & box-shadow** on button hover:
+
+  ```css
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%),
+                linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  ```
+
+  * **like** / **heart** icon
+  * **like** / **heart** icon animated on **click**:
+
+  ```css
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  ```
+
+  * **Badge / Nouveau button** 
+  ```css
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  ```
 ## Versionning / Déploiement
 
 * Projet en déploiement continue sur les [Github actions](https://gouttebroze.github.io/oh-my-food/).
 * Code source / Repo. disponible [ici](https://github.com/gouttebroze/oh-my-food).
-
 
 ## Notes
 
@@ -37,7 +61,7 @@
 * logo coeur ds les cards:
   * signaler la couleur (transparent ou linear) ds le "alt" de la balise <img>?
 
-* utilisation des polices (fonts) 
+* utilisation des polices (fonts)
   * déclarer 1 sélecteur & ses propriété, puis l'utiliser ds les classes ds le `html` pour les déclarer & les utiliser? (comme c'est présenter ds **google font**...)
 
 ### A propos des animations
@@ -46,26 +70,25 @@
 
 * pr l'animation au survol de l'icon "coeur" ? avec une image (pr faire avec couleur, faire avec `svg`)
 
-* Animation des cartes des restaurant 
+* Animation des cartes des restaurant
   * chaque restaurant propose une carte, un menu avec plusieurs propositions pour l'entrée, le plat & le dessert
-  * l'utilisateur peut choisir les propositions qu'il désire 
+  * l'utilisateur peut choisir les propositions qu'il désire
   * l'action de ce choix lance une animation (en CSS), à terme, ce choix sera fait au click (sûrement en JavaScript), pour l'instant (en CSS), ce sera au survol
   
-  * donc, l'**animation** se joue au **survol** du block 
+  * donc, l'**animation** se joue au **survol** du block
 
   * **comment construire cette animation ?**
 
-    * avec les **keyframes** ? qui sera lancé (propriété "animation-name") au survol (`hover`) du block de proposition ? 
-    
+    * avec les **keyframes** ? qui sera lancé (propriété "animation-name") au survol (`hover`) du block de proposition ?
+
     * il faut faire apparaitre un icon (fontawsome)
 
       * icon sur un pseudo element `::before` ou avec une balise ds le `HTML` ?
 
-      * ce survol fait apparaitre un autre élément (caché) ? ou modifie le block ? 
-      
-
+      * ce survol fait apparaitre un autre élément (caché) ? ou modifie le block ?
 
 * pbm de marges (base du style, casse tout ...)
+
 ```scss
 * {
   padding: 0;
@@ -75,9 +98,9 @@
 
 ## VEILLE - JAVASCRIPT
 
-+ créer la partie JavaScript du loader avec la base CSS déjà réalisée 
+* créer la partie JavaScript du loader avec la base CSS déjà réalisée
 
-+ proposition: ``loader`` sous forme de ``custom element``, simple d'utilisation
+* proposition: ``loader`` sous forme de ``custom element``, simple d'utilisation
 
 ```html
 ...
@@ -112,7 +135,7 @@ customElements.define('spinning-dots', SpinningDots)
 
 ```
 
-## MEMO 
+## MEMO
 
 ### MEMO SASS
 

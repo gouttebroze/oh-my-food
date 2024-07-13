@@ -21,6 +21,14 @@ html {
   -moz-box-shadow: 0px 10px 12px 0px themes.$shadow-color;
 }
 
+%location-shadow {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+%card-list-shadow {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
 a {
   color: inherit;
   text-decoration: none
@@ -44,17 +52,6 @@ a {
   }
 }
 
-// .home-header-block {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-
-//   .logo {
-//     width: 40vh;
-//     margin: 2rem 4rem;
-//   }
-// }
-
 .main-container {
   background-color: themes.$second-background-color;
   padding-bottom: 6.6rem;
@@ -70,9 +67,7 @@ a {
   /* to center icon & title on horizontal axe */
   column-gap: 20px;
   background-color: themes.$second-background-color;
-  box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+  @extend %location-shadow;
 
   &__image {
     width: 12px;
@@ -152,7 +147,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  @extend %shadow;
+  @extend %card-list-shadow;
   border: none;
   font-size: 1.6rem;
   font-weight: 500;
@@ -280,94 +275,100 @@ ol {
   }
 }
 
-.like-input {
-  -webkit-appearance: none;
-  cursor: pointer;
-  height: 100%;
-	position: absolute;
-	width: 100%;
-  appearance: none;
-  font-weight: 400;
-  font-family: "Font Awesome 6 Free";
+// .like-input {
+//   -webkit-appearance: none;
+//   cursor: pointer;
+//   height: 100%;
+// 	position: absolute;
+// 	width: 100%;
+//   appearance: none;
+//   font-weight: 400;
+//   font-family: "Font Awesome 6 Free";
 
-  &::before {
-    // content: '\f004';  
-    // content: url(../assets/color-heart/Vector.svg);
-    content: '';
-    display: block;
-    position: absolute;
-    height: 70%;
-    width: 85%;
-  }
+//   &::before {
+//     content: '\f004';  
+//     //content: url(../assets/Card/Vector.svg);
+//     // content: '';
+//     display: block;
+//     position: absolute;
 
-  &::after {
-    background: url(../assets/Card/Vector.svg);
-    content: "";
-    height: 25px;
-    opacity: 0.6;
-    position: absolute;
-    width: 25px;
-  }
-
-  &:checked::after {
-    opacity: 1;
-    background: url(../assets/color-heart/Vector.svg);
-  }
-}
-
-// .footer-block {
-//   background-color: themes.$dark-color;
-//   color: themes.$background-color;
-//   padding-bottom: 2.2rem;
-
-//   &__title {
-//     font-family: "Shrikhand", serif;
-//     font-size: 1.8rem;
-//     padding-left: 2.5rem;
-//     padding-top: 2.2rem;
-//     margin-top: 0;
+//     //transition: content 3000ms;
 //   }
 
-//   ul {
-//     padding-left: 2.5rem;
+//   &:hover::before {
+//     content: '';
 //   }
 
-//   li {
-//     font-size: 1.6rem;
-//     padding-bottom: 0.7rem;
+//   &:checked:before {
+//     content: '';
 //   }
 
-//   .footer-link {
-//     padding-left: 1.1rem;
-//     padding-bottom: 0.7rem;
-//   }
+//   // &::after {
+//   //   background: url(../assets/Card/Vector.svg);
+//   //   content: "";
+//   //   height: 25px;
+//   //   opacity: 0.6;
+//   //   position: absolute;
+//   //   width: 25px;
+//   // }
 
-//   // span {
-//   //   padding-left: 7px;
+//   // &:checked::after {
+//   //   opacity: 1;
+//   //   background: url(../assets/color-heart/Vector.svg);
 //   // }
 // }
 
-/*
-@keyframes heartColor {
-  from {
-    background-image: url(../assets/Card/Vector.svg); 
-  } 
-  to {
-    
-  }
+// .wrapper__icon {
+//   font-size: 1.2rem; 
+//   color: themes.$background-color;
+// }
+
+// .wrapper__icon--like {
+//   font-size: 2.2rem; 
+// }
+
+/***************************
+****************************
+****************************/
+.wrapper-icon {
+  display: block;
+  position: relative;
 }
 
- @media #{$large-screen} {
-  html {
-    background-color: black;
-  }
-} */
-
-.wrapper__icon {
-  font-size: 1.2rem; 
-  color: themes.$background-color;
+.wrapper-icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 600ms ease-in-out;
 }
 
-.wrapper__icon--like {
-  font-size: 2.2rem; 
+.wrapper-icon .icon-default {
+  opacity: 1;
+}
+
+.wrapper-icon .icon-hover {
+  opacity: 0;
+}
+
+.wrapper-icon:hover .icon-default, 
+.wrapper-icon:focus .icon-default {
+  opacity: 0;
+}
+
+.wrapper-icon:hover .icon-hover, 
+.wrapper-icon:focus .icon-hover {
+  opacity: 1;
+}
+
+.fa-heart {
+  transition: color 700ms ease-in-out;
+  font-size: 4rem;
+
+  &:hover {
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
+    mix-blend-mode: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

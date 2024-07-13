@@ -1,10 +1,8 @@
 @charset "UTF-8";
 @import "./css_reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-.btn, .card, .btn--linear-gardient {
-  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+.btn, .btn--linear-gardient {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 /*********************************************
@@ -32,38 +30,40 @@
   color: rgb(255, 255, 255);
   width: 218px;
   height: 50px;
-  background: rgb(147, 86, 220);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 .btn--linear-gardient:hover {
-  animation: btn-animated 0.5s;
+  animation: btn-animated 300ms;
   animation-direction: alternate;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes btn-animated {
   from {
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
   to {
-    background: rgb(168, 127, 218);
-    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
 }
-.card, .btn, .btn--linear-gardient {
-  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+/****************************************************************
+/******** Icons Font Awesome (SCSS version) *********************
+*****************************************************************/
+/*
+ * affecter une opacité à 0 sur icon avec bg linear-gardient, ce qui le rend invisible
+ * la valeur de l'opacité passe à 1 sur le pseudo-element ":hover", ce qui le rend visible
+ */
+.theme-linear-gardient {
+  --fa-secondary-opacity: 1;
+  --fa-primary-color: transparent;
+  --fa-secondary-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+.btn, .btn--linear-gardient {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 /*********************************************
@@ -91,35 +91,39 @@
   color: rgb(255, 255, 255);
   width: 218px;
   height: 50px;
-  background: rgb(147, 86, 220);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
 .btn--linear-gardient:hover {
-  animation: btn-animated 0.5s;
+  animation: btn-animated 300ms;
   animation-direction: alternate;
   animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes btn-animated {
   from {
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-    box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
   to {
-    background: rgb(168, 127, 218);
-    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
-    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.2);
-    -webkit-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 10px 12px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
 }
+/****************************************************************
+/******** Icons Font Awesome (SCSS version) *********************
+*****************************************************************/
+/*
+ * affecter une opacité à 0 sur icon avec bg linear-gardient, ce qui le rend invisible
+ * la valeur de l'opacité passe à 1 sur le pseudo-element ":hover", ce qui le rend visible
+ */
+.theme-linear-gardient {
+  --fa-secondary-opacity: 1;
+  --fa-primary-color: transparent;
+  --fa-secondary-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
 .header-block {
   display: flex;
   flex-direction: column;
@@ -190,10 +194,14 @@ ul {
   /* font-weight: 400; */
 }
 
-.card, .btn {
+.btn {
   box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
@@ -266,6 +274,7 @@ ul {
   animation: cards-onset 0.5s;
   animation-play-state: running;
   animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
   /*********************************** 
   *** menu cards animated on hover *** 
   ************************************/
@@ -389,5 +398,43 @@ ul {
   }
   to {
     transform: scale(1);
+  }
+}
+/*****************************************************************
+  About heart icon effect
+  * animation description: 
+      + trigger event is: 
+          - on click only on desktop 
+          - on hover on others medias
+      + it should gradually fill up
+      + from a transparence background with border
+      + to final with a linear-gardient background
+*****************************************************************/
+.wrapper__icon:hover {
+  animation: likeIconFilling 300ms ease-in-out;
+}
+
+@keyframes likeIconfilling {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  }
+  25% {
+    transform: scale(0.25);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  75% {
+    transform: scale(0.75);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   }
 }/*# sourceMappingURL=menu.css.map */
