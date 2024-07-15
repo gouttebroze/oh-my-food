@@ -447,7 +447,7 @@ ul {
   font-size: 1.6rem;
   background-color: rgb(255, 255, 255);
   overflow: hidden;
-  animation: cards-onset 0.5s;
+  animation: cards-onset 0.3s;
   animation-play-state: running;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
@@ -475,6 +475,7 @@ ul {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 .card__content--title {
   font-size: 1.8rem;
@@ -574,4 +575,10 @@ ul {
   to {
     transform: scale(1);
   }
+}
+/***************************************
+*** fix main top postion deplacement ***
+****************************************/
+.footer-block {
+  margin-top: -25px;
 }/*# sourceMappingURL=menu.css.map */

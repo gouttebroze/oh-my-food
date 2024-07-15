@@ -117,10 +117,11 @@ ul {
   background-color: themes.$background-color;
   overflow: hidden;
   // padding: 1.2rem 0 1.2rem 1.5rem;
-  animation: cards-onset .5s;
+  animation: cards-onset .3s;
   animation-play-state: running;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
+
 /*********************************** 
 *** menu cards animated on hover *** 
 ************************************/
@@ -149,6 +150,7 @@ ul {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 
     &--title {
       font-size: 1.8rem;
@@ -181,8 +183,6 @@ ul {
   }
   
 }
-
-
 
 .fa-check {
   background-color: themes.$background-color;  
@@ -225,34 +225,9 @@ ul {
   }
 }
 
-// .wrapper__icon {
-//   &:hover {
-//     animation: likeIconFilling 300ms ease-in-out; 
-//   }
-// }
-
-// @keyframes likeIconfilling {
-//   0% {
-//     transform: scale(0);
-//     opacity: 0;
-//     background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-//   }
-//   25% {
-//     transform: scale(0.25);
-//     opacity: 0.25;
-//   }
-//   50% {
-//     transform: scale(0.5);
-//     opacity: 0.5;
-    
-//   }
-//   75% {
-//     transform: scale(0.75);
-//     opacity: 0.75;
-//   }
-//   100% {
-//     transform: scale(1);
-//     opacity: 1;
-//       background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-//   }
-// }
+/***************************************
+*** fix main top postion deplacement ***
+****************************************/
+.footer-block {
+  margin-top: -25px;
+}
