@@ -199,78 +199,62 @@ ul {
   }
 }
 
-/**************************************************
-      loader with stagger circles - animation
-***************************************************/
-.section-loader {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/********************************************
+* "like" / "fa-heart" icon - use a checkbox 
+*  to trigger animation on click 
+*  TODO: import to "_utils.scss"
+*********************************************/
+.fa-solid {
+  font-weight: 900;
 }
-.loader {
-  width: 50px;
-  height: 50px;
-  // margin-right: 45px;
-  margin-top: 35px;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
 
-  &-stagger-circles {
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #000;
-    animation: spin 1000ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    // animation-play-state: running;
-    // animation-play-state: paused;
+.fa-regular {
+  font-weight: 400;
+}
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      bottom: 5px;
-      right: 5px;
-      border: 3px solid transparent;
-      border-top-color: #4b4949;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: spin 5s linear infinite; /* drive the stagger between cercles */
-      
-    }
+.input-default {
+  opacity: 1;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      bottom: 12px;
-      right: 12px;
-      border: 3px solid transparent;
-      border-top-color: #4b4949;
-      border-radius: 50%;
-      opacity: 0.5; /* dicrease opacity towards the center */
-      animation: spin 10s linear infinite; /* drive the stagger between cercles */
-    }
+  &:checked {
+    opacity: 0;
   }
 }
 
-.start-loader {
-  animation-play-state: running;
+.input-checked {
+  opacity: 0;
+
+  &:checked {
+    opacity: 1;
+  }
 }
 
-.stop-loader {
-  animation-play-state: paused;
+.input-wrapper {
+  display: block;
+  position: relative;  
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
+input {
+  position: absolute;
+  font-size: 3rem;
+  appearance: none;
+  font-family: "Font Awesome 6 Free"; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+
+  &::before {
+    content: "\f004";
+    cursor: pointer;
+    background: rgb(147, 86, 220);
+    background: -moz-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    background: linear-gradient(0deg, rgba(147, 86, 220, 1) 0%, rgba(255, 121, 218, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    color: themes.$background-color;
+    mix-blend-mode: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }      
 }

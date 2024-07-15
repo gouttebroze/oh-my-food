@@ -65,9 +65,9 @@
 .wrapper-icon .icon-hover {
   opacity: 0;
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
-    mix-blend-mode: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  mix-blend-mode: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .wrapper-icon:hover .icon-default, 
@@ -84,77 +84,16 @@
   -webkit-text-fill-color: transparent;
 }
 
-.fa-heart {
-  //transition: color 700ms ease-in-out;
-  
-
+//.fa-heart {
+//transition: color 700ms ease-in-out;
 //   &:hover {
 //     background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
 //     mix-blend-mode: text;
 //     background-clip: text;
 //     -webkit-text-fill-color: transparent;
 //   }
-}
+// }
 
 /***************************
  input animation on checked 
 ****************************/
-
-// .wrapper-input {
-//   display: block;
-//   position: relative;
-// }
-
-// .wrapper-input .input {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-
-//   transition: opacity 600ms ease;
-// }
-
-
-
-// .input-solid {
-//     font-weight: 900;
-// }
-
-// .input-regular {
-//     font-weight: 400;
-// }
-
-// .wrapper-input .input-default {
-//   opacity: 1;
-// }
-
-// .wrapper-input .input-checked {
-//   opacity: 0;
-// }
-
-// .wrapper-input:checked .input-default {
-//   opacity: 0;
-// }
-
-// .wrapper-input:checked .input-checked {
-//   opacity: 1;
-// }
-
-// .input-heart {
-//   //transition: color 700ms ease-in-out;
-//   appearance: none;
-//   font-family: "Font Awesome 6 Free";
-//   font-size: 3rem;
-
-//   &::before {
-//       content: '\f004';
-
-//     &:checked {
-//         background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
-//         mix-blend-mode: text;
-//         background-clip: text;
-//         -webkit-text-fill-color: transparent;
-//     }     
-//   }
-  
-// }

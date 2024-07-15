@@ -149,7 +149,9 @@ customElements.define('spinning-dots', SpinningDots)
 
 * Finir animation loader
 
-* fix position titres plats "entrée", "plat", ...
+* Continuer veille (sur custom-element & autres)
+
+* fix bugs (position titres des 3 cards ("entrée", "plat", "dessert"))
 
 * fix pages 2 , voir 3 et 4 ...
 
@@ -158,6 +160,12 @@ customElements.define('spinning-dots', SpinningDots)
 * icon like au click sur mobile
 
 * responsive tablette & desktop
+
+* faire 1 base.css & un main.css 
+
+* mettre fichier font awesome scss ds 1 dossier à part
+
+* fix title & sous-titre des cards (ds menu) pourquoi les ... fonctionne pas ?
 
 <!-- OK * Problème sur animation **icons heart / like**:
 

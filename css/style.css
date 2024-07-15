@@ -1,6 +1,16 @@
 @charset "UTF-8";
+/**** fonts ****/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import "./css_reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
+}
+/**** colors mixins ****/
+/**** colors variables ****/
 .btn, .card__btn, .btn--linear-gardient {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -66,6 +76,28 @@
   --fa-secondary-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/**** fonts ****/
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
+}
+/**** colors mixins ****/
+/**** colors variables ****/
 .btn, .card__btn, .btn--linear-gardient {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -192,6 +224,13 @@
   font-size: 1rem;
 }
 
+/**** fonts ****/
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
+}
+/**** colors mixins ****/
+/**** colors variables ****/
 .btn, .card__btn, .btn--linear-gardient {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -344,7 +383,10 @@
 /***************************
  input animation on checked 
 ****************************/
-/* pr écran large type desktop */
+/* breakpoints */
+/* desktop */
+/* tablette */
+/* mobile */
 /* "fontawesome" files required to use "regular" & "solid" types icons  */
 /*!
  * Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com
@@ -8634,10 +8676,6 @@ html {
   -moz-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
 }
 
-.location {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
 .card__list {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -8678,6 +8716,7 @@ a {
   -moz-column-gap: 20px;
        column-gap: 20px;
   background-color: rgb(246, 246, 246);
+  box-shadow: inset 2px -4px 5px 2px rgba(0, 0, 0, 0.25);
 }
 .location__image {
   width: 12px;
@@ -8719,22 +8758,20 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.5rem;
   animation: hide-loader 5s both;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgba(122, 117, 117, 0.5);
+  z-index: 100;
 }
 
 @keyframes hide-loader {
   0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  75% {
-    opacity: 0.25;
+    display: flex;
   }
   100% {
-    opacity: 0;
+    display: none;
   }
 }
 .fonctionnement {
@@ -8877,5 +8914,16 @@ ol li::before {
 }
 
 /***************************
- into "./partials/utils"
-****************************//*# sourceMappingURL=style.css.map */
+
+****************************/
+@media only screen and (min-width: 1024px) {
+  .fonctionnement__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .cards__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}/*# sourceMappingURL=style.css.map */

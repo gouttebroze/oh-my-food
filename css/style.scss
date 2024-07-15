@@ -1,8 +1,10 @@
 @use "./partials/themes";
+
+@import "./partials/base";
 @import "./partials/componants";
 @import "./partials/utils";
 @import "./css_reset.css";
-@import "./responsive.scss";
+@import "./partials/responsive";
 
 /* "fontawesome" files required to use "regular" & "solid" types icons  */
 @import "./fontawesome.scss";
@@ -56,6 +58,7 @@ a {
 .main-container {
   background-color: themes.$second-background-color;
   padding-bottom: 6.6rem;
+
 }
 
 .location {
@@ -68,7 +71,7 @@ a {
   /* to center icon & title on horizontal axe */
   column-gap: 20px;
   background-color: themes.$second-background-color;
-  @extend %location-shadow;
+  box-shadow: inset 2px -4px 5px 2px rgba(0, 0, 0, 0.25);
 
   &__image {
     width: 12px;
@@ -107,18 +110,6 @@ a {
   justify-content: center;
 }
 
-// .btn--linear-gardient {
-//   @include themes.linear-gardient-primary;
-//   @extend .btn;
-//   color: themes.$background-color;
-//   width: 218px;
-//   height: 5rem;
-
-//   &:hover {
-//     @include themes.linear-gardient-secondary;
-//   }
-// }
-
 /*
  *  TODO: finir loader (cacher autres éléments puis disparait, voir pt etre avec "visibility: hidden;")
  */
@@ -126,22 +117,29 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.5rem;
+  // margin-bottom: 1.5rem;
   animation: hide-loader 5s both;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(122, 117, 117, 0.5);
+  z-index: 100;
 }
 
 @keyframes hide-loader {
   0% {
-    opacity: 1;
+    display: flex;
+    // opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    // opacity: 0.5;
   }
   75% {
-    opacity: 0.25;
+    // opacity: 0.25;
   }
   100% {
-    opacity: 0;
+    // opacity: 0;
+    display: none;
   }
 }
 
@@ -299,48 +297,17 @@ ol {
   }
 }
 /***************************
- into "./partials/utils"
+ 
 ****************************/
-// .wrapper-icon {
-//   display: block;
-//   position: relative;
-// }
+@media #{$large-screen} {
+  .fonctionnement__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 
-// .wrapper-icon .icon {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   /* try with scale instead opacity */
-//   transition: opacity 600ms ease-in-out;
-// }
-
-// .wrapper-icon .icon-default {
-//   opacity: 1;
-// }
-
-// .wrapper-icon .icon-hover {
-//   opacity: 0;
-// }
-
-// .wrapper-icon:hover .icon-default, 
-// .wrapper-icon:focus .icon-default {
-//   opacity: 0;
-// }
-
-// .wrapper-icon:hover .icon-hover, 
-// .wrapper-icon:focus .icon-hover {
-//   opacity: 1;
-// }
-
-// .fa-heart {
-//   transition: color 700ms ease-in-out;
-//   font-size: 4rem;
-
-//   &:hover {
-//     background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
-//     mix-blend-mode: text;
-//     background-clip: text;
-//     -webkit-text-fill-color: transparent;
-//   }
-// }
+  .cards__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

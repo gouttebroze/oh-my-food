@@ -12,13 +12,20 @@
 </head>
 
 <body>
+
+  <!-- loader -->
+  <div class="section__loader">
+    <span class="loader loader-quart"></span>
+  </div>
+
   <header class="home-header-block">
     <img class="logo" src="./assets/logo/ohmyfood.png" alt="logo">
   </header>
+  
   <main>
     <div class="main-container">
       <section class="location">
-        <img class="location__image" src="./assets/Icon/Pin.png" alt="icon location">
+        <span class="fa-solid fa-location-dot fa-xl"></span>
         <h3 class="location__title">Paris, Belleville</h3>
       </section>
       <section class="hero">
@@ -28,9 +35,7 @@
           <button class="btn--linear-gardient">Explorer nos restaurants</button>
         </a>
       </section>
-      <section class="section__loader">
-        <span class="loader loader-quart"></span>
-      </section>
+      
       <section class="fonctionnement">
         <h3 class="fonctionnement__title">Fonctionnement</h3>
         <ol class="fonctionnement__content">
@@ -62,100 +67,91 @@
       </section>
       <section id="restaurants" class="cards">
         <h3 class="cards__title">Restaurants</h3>
-        <a href="./menu.html">
-          <article class="card">
-            <button class="card__btn">Nouveau</button>
-            <img class="card__image" src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-            <div class="content">
-              <div class="content__text">
-                <h3 class="content__text--title">La palette du goût</h3>
-                <h5 class="content__text--subtitle">Ménilmontant</h5>
+        <div class="cards__wrapper">
+          <a href="./menu.html">
+            <article class="card">
+              <button class="card__btn">Nouveau</button>
+              <img class="card__image" src="./assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+              <div class="content">
+                <div class="content__text">
+                  <h3 class="content__text--title">La palette du goût</h3>
+                  <h5 class="content__text--subtitle">Ménilmontant</h5>
+                </div>
+                <span class="wrapper-icon">
+                  <span class="icon icon-default">
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <span class="icon icon-hover">
+                    <i class="fa-solid fa-heart"></i>
+                  </span>
+                </span>
               </div>
-
-              <!-- <span class="wrapper-input">
-                <span class="input input-default">
-                  <input type="checkbox" class="input-regular input-heart">
+            </article>
+          </a>
+          <a href="./menu2.html">
+            <article class="card">
+              <button class="card__btn">
+                <span>Nouveau</span>
+              </button>
+              <img class="card__image" src="./assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                alt="une table de restaurant">
+              <div class="content">
+                <div class="content__text">
+                  <h3 class="content__text--title">La note enchantée</h3>
+                  <h5 class="content__text--subtitle">Charonne</h5>
+                </div>
+                <span class="wrapper-icon">
+                  <span class="icon icon-default">
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <span class="icon icon-hover">
+                    <i class="fa-solid fa-heart"></i>
+                  </span>
                 </span>
-                <span class="input input-checked">
-                  <input type="checkbox" class="input-solid input-heart">
-                </span>
-              </span> -->
-              <span class="wrapper-icon">
-                <span class="icon icon-default">
-                  <i class="fa-regular fa-heart"></i>
-                </span>
-                <span class="icon icon-hover">
-                  <i class="fa-solid fa-heart"></i>
-                </span>
-              </span>
-            </div>
-          </article>
-        </a>
-        <a href="./menu2.html">
-          <article class="card">
-            <button class="card__btn">
-              <span>Nouveau</span>
-            </button>
-            <img class="card__image" src="./assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-              alt="une table de restaurant">
-            <div class="content">
-              <div class="content__text">
-                <h3 class="content__text--title">La note enchantée</h3>
-                <h5 class="content__text--subtitle">Charonne</h5>
               </div>
-              <span class="wrapper-icon">
-                <span class="icon icon-default">
-                  <i class="fa-regular fa-heart"></i>
+            </article>
+          </a>
+          <a href="./menu.html">
+            <article class="card">
+              <img class="card__image" src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                alt="une table de restaurant">
+              <div class="content">
+                <div class="content__text">
+                  <h3 class="content__text--title">À la française</h3>
+                  <h5 class="content__text--subtitle">Cité Rouge</h5>
+                </div>
+                <span class="wrapper-icon">
+                  <span class="icon icon-default">
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <span class="icon icon-hover">
+                    <i class="fa-solid fa-heart"></i>
+                  </span>
                 </span>
-                <span class="icon icon-hover">
-                  <i class="fa-solid fa-heart"></i>
-                </span>
-              </span>
-            </div>
-          </article>
-        </a>
-        <a href="./menu.html">
-          <article class="card">
-            <button class="card__btn">Nouveau</button>
-            <img class="card__image" src="./assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-              alt="une table de restaurant">
-            <div class="content">
-              <div class="content__text">
-                <h3 class="content__text--title">À la française</h3>
-                <h5 class="content__text--subtitle">Cité Rouge</h5>
               </div>
-              <span class="wrapper-icon">
-                <span class="icon icon-default">
-                  <i class="fa-regular fa-heart"></i>
+            </article>
+          </a>
+          <a href="./menu.html">
+            <article class="card">
+              <img class="card__image" src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                alt="une table de restaurant">
+              <div class="content">
+                <div class="content__text">
+                  <h3 class="content__text--title">Le délice des sens</h3>
+                  <h5 class="content__text--subtitle">Folie-Méricourt</h5>
+                </div>
+                <span class="wrapper-icon">
+                  <span class="icon icon-default">
+                    <i class="fa-regular fa-heart"></i>
+                  </span>
+                  <span class="icon icon-hover">
+                    <i class="fa-solid fa-heart"></i>
+                  </span>
                 </span>
-                <span class="icon icon-hover">
-                  <i class="fa-solid fa-heart"></i>
-                </span>
-              </span>
-            </div>
-          </article>
-        </a>
-        <a href="./menu.html">
-          <article class="card">
-            <button class="card__btn">Nouveau</button>
-            <img class="card__image" src="./assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-              alt="une table de restaurant">
-            <div class="content">
-              <div class="content__text">
-                <h3 class="content__text--title">Le délice des sens</h3>
-                <h5 class="content__text--subtitle">Folie-Méricourt</h5>
               </div>
-              <span class="wrapper-icon">
-                <span class="icon icon-default">
-                  <i class="fa-regular fa-heart"></i>
-                </span>
-                <span class="icon icon-hover">
-                  <i class="fa-solid fa-heart"></i>
-                </span>
-              </span>
-            </div>
-          </article>
-        </a>
+            </article>
+          </a>
+        </div>
       </section>
     </div>
   </main>

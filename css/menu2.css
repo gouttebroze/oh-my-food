@@ -1,6 +1,16 @@
 @charset "UTF-8";
+/**** fonts ****/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/**** fonts ****/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import "./css_reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
+}
+/**** colors mixins ****/
+/**** colors variables ****/
 .btn, .btn--linear-gardient, .card, .btn--linear-gardient {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -66,6 +76,12 @@
   --fa-secondary-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(../assets/Fonts/roboto/Roboto-Regular.ttf) format("truetype");
+}
+/**** colors mixins ****/
+/**** colors variables ****/
 .card, .btn, .btn--linear-gardient {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
@@ -308,72 +324,59 @@ ul {
   padding-left: 7px;
 }
 
-/**************************************************
-      loader with stagger circles - animation
-***************************************************/
-.section-loader {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+/********************************************
+* "like" / "fa-heart" icon - use a checkbox 
+*  to trigger animation on click 
+*  TODO: import to "_utils.scss"
+*********************************************/
+.fa-solid {
+  font-weight: 900;
 }
 
-.loader {
-  width: 50px;
-  height: 50px;
-  margin-top: 35px;
-  display: inline-block;
-  vertical-align: middle;
+.fa-regular {
+  font-weight: 400;
+}
+
+.input-default {
+  opacity: 1;
+}
+.input-default:checked {
+  opacity: 0;
+}
+
+.input-checked {
+  opacity: 0;
+}
+.input-checked:checked {
+  opacity: 1;
+}
+
+.input-wrapper {
+  display: block;
   position: relative;
 }
-.loader-stagger-circles {
-  border-radius: 50%;
-  border: 3px solid transparent;
-  border-top-color: #000;
-  animation: spin 1000ms;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.loader-stagger-circles::after {
-  content: "";
+
+input {
   position: absolute;
-  top: 5px;
-  left: 5px;
-  bottom: 5px;
-  right: 5px;
-  border: 3px solid transparent;
-  border-top-color: #4b4949;
-  border-radius: 50%;
-  opacity: 0.8;
-  animation: spin 5s linear infinite; /* drive the stagger between cercles */
+  font-size: 3rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-family: "Font Awesome 6 Free";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
-.loader-stagger-circles::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  bottom: 12px;
-  right: 12px;
-  border: 3px solid transparent;
-  border-top-color: #4b4949;
-  border-radius: 50%;
-  opacity: 0.5; /* dicrease opacity towards the center */
-  animation: spin 10s linear infinite; /* drive the stagger between cercles */
-}
-
-.start-loader {
-  animation-play-state: running;
-}
-
-.stop-loader {
-  animation-play-state: paused;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0turn);
-  }
-  to {
-    transform: rotate(1turn);
-  }
+input::before {
+  content: "\f004";
+  cursor: pointer;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+  color: rgb(255, 255, 255);
+  mix-blend-mode: text;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }/*# sourceMappingURL=menu2.css.map */
