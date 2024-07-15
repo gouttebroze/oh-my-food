@@ -1,5 +1,6 @@
-@use "./themes.scss";
+@use "./partials/themes";
 @import "./partials/componants";
+@import "./partials/utils";
 @import "./css_reset.css";
 @import "./responsive.scss";
 
@@ -118,6 +119,32 @@ a {
 //   }
 // }
 
+/*
+ *  TODO: finir loader (cacher autres éléments puis disparait, voir pt etre avec "visibility: hidden;")
+ */
+.section__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  animation: hide-loader 5s both;
+}
+
+@keyframes hide-loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .fonctionnement {
   background-color: themes.$background-color;
   padding-top: 2.8rem;
@@ -230,7 +257,9 @@ ol {
     top: 1.5rem;
     right: 1.5rem;
     height: 2.9rem;
-    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &__image {
@@ -267,108 +296,51 @@ ol {
         margin-bottom: 1.2rem;
       }
     }
-
-    // &__like {
-    //   margin-right: 2.5rem;
-    //   padding: 40px;       
-    // }
   }
 }
-
-// .like-input {
-//   -webkit-appearance: none;
-//   cursor: pointer;
-//   height: 100%;
-// 	position: absolute;
-// 	width: 100%;
-//   appearance: none;
-//   font-weight: 400;
-//   font-family: "Font Awesome 6 Free";
-
-//   &::before {
-//     content: '\f004';  
-//     //content: url(../assets/Card/Vector.svg);
-//     // content: '';
-//     display: block;
-//     position: absolute;
-
-//     //transition: content 3000ms;
-//   }
-
-//   &:hover::before {
-//     content: '';
-//   }
-
-//   &:checked:before {
-//     content: '';
-//   }
-
-//   // &::after {
-//   //   background: url(../assets/Card/Vector.svg);
-//   //   content: "";
-//   //   height: 25px;
-//   //   opacity: 0.6;
-//   //   position: absolute;
-//   //   width: 25px;
-//   // }
-
-//   // &:checked::after {
-//   //   opacity: 1;
-//   //   background: url(../assets/color-heart/Vector.svg);
-//   // }
-// }
-
-// .wrapper__icon {
-//   font-size: 1.2rem; 
-//   color: themes.$background-color;
-// }
-
-// .wrapper__icon--like {
-//   font-size: 2.2rem; 
-// }
-
 /***************************
-****************************
+ into "./partials/utils"
 ****************************/
-.wrapper-icon {
-  display: block;
-  position: relative;
-}
+// .wrapper-icon {
+//   display: block;
+//   position: relative;
+// }
 
-.wrapper-icon .icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 600ms ease-in-out;
-}
+// .wrapper-icon .icon {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   /* try with scale instead opacity */
+//   transition: opacity 600ms ease-in-out;
+// }
 
-.wrapper-icon .icon-default {
-  opacity: 1;
-}
+// .wrapper-icon .icon-default {
+//   opacity: 1;
+// }
 
-.wrapper-icon .icon-hover {
-  opacity: 0;
-}
+// .wrapper-icon .icon-hover {
+//   opacity: 0;
+// }
 
-.wrapper-icon:hover .icon-default, 
-.wrapper-icon:focus .icon-default {
-  opacity: 0;
-}
+// .wrapper-icon:hover .icon-default, 
+// .wrapper-icon:focus .icon-default {
+//   opacity: 0;
+// }
 
-.wrapper-icon:hover .icon-hover, 
-.wrapper-icon:focus .icon-hover {
-  opacity: 1;
-}
+// .wrapper-icon:hover .icon-hover, 
+// .wrapper-icon:focus .icon-hover {
+//   opacity: 1;
+// }
 
-.fa-heart {
-  transition: color 700ms ease-in-out;
-  font-size: 4rem;
+// .fa-heart {
+//   transition: color 700ms ease-in-out;
+//   font-size: 4rem;
 
-  &:hover {
-    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
-    mix-blend-mode: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
+//   &:hover {
+//     background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
+//     mix-blend-mode: text;
+//     background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
+// }

@@ -1,4 +1,4 @@
-@use " ../themes.scss" as t;
+@use "./themes.scss" as t;
 
 %shadow {
   box-shadow: 0px 10px 6px t.$shadow-color;

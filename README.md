@@ -33,10 +33,12 @@
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   ```
 
-  * **Badge / Nouveau button** 
+  * **Badge / Nouveau button**
+
   ```css
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   ```
+
 ## Versionning / Déploiement
 
 * Projet en déploiement continue sur les [Github actions](https://gouttebroze.github.io/oh-my-food/).
@@ -143,10 +145,12 @@ customElements.define('spinning-dots', SpinningDots)
 
 * Pour en savoir **+**, voir la doc. de `sass` [ici](https://sass-lang.com/documentation/at-rules/use/).
 
-## TODO
+## TODO - TROUBLES
 
-* Avec Sass, la directive @import permet d’importer durant la compilation le contenu d’un fichier SCSS dans un autre fichier SCSS.
-Il est inutile de préciser l’extension du fichier importé à Sass.
-Une feuille partielle ou partial, dont le nom commence par un underscore, est un fichier qui a uniquement vocation à être importé dans d’autres feuilles de styles. Aucun fichier CSS n’est généré pour lui à la compilation.
+* Finir animation loader
 
-* créer des "partials" avec un underscore (_).
+* Problème sur animation **icons heart / like**:
+
+  * après un survol, l'icon ne retrouve pas son état initial immédiatement mais il devient noir quelques secondes...
+  * cette couleur noir correspond à la couleur donné à la propriété `background` sur le second icon (`fa-solid`). Pour rappel, on donne a cet icon une opacité de 0 qui passe à 1 au survol. On a deux icons, l'autre est un `fa-regular` avec une opacité de 1 qui passe à 0 au survol.
+  * au survol, on donne un `background` de couleur `linear-gardient` à l'icon `fa-solid`, c'est cet élement qui à par défaut cette couleur noire.

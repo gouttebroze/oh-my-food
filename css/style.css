@@ -18,8 +18,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;
-  /* margin-left: 1.3rem;
-  margin-right: 1.3rem; */
 }
 
 .btn--linear-gardient {
@@ -30,22 +28,28 @@
   color: rgb(255, 255, 255);
   width: 218px;
   height: 50px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
 }
 .btn--linear-gardient:hover {
-  animation: btn-animated 300ms;
+  animation: btn-animated 200ms;
   animation-direction: alternate;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
 }
 
 @keyframes btn-animated {
   from {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
   to {
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background: rgb(168, 127, 218);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
 }
@@ -79,8 +83,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;
-  /* margin-left: 1.3rem;
-  margin-right: 1.3rem; */
 }
 
 .btn--linear-gardient {
@@ -91,23 +93,29 @@
   color: rgb(255, 255, 255);
   width: 218px;
   height: 50px;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
 }
 
 .btn--linear-gardient:hover {
-  animation: btn-animated 300ms;
+  animation: btn-animated 200ms;
   animation-direction: alternate;
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
 }
 
 @keyframes btn-animated {
   from {
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
   to {
-    background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%), linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    background: rgb(168, 127, 218);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
 }
@@ -181,6 +189,158 @@
   padding-left: 7px;
 }
 
+.btn, .card__btn, .btn--linear-gardient {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+/*********************************************
+*  linear-gardient button animated on hover 
+*  using @keyframes  
+**********************************************/
+.btn, .card__btn, .btn--linear-gardient {
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 25px;
+  /* changed only on "menu" pages */
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.btn--linear-gardient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  width: 218px;
+  height: 50px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+}
+
+.btn--linear-gardient:hover {
+  animation: btn-animated 200ms;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes btn-animated {
+  from {
+    background: rgb(147, 86, 220);
+    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  to {
+    background: rgb(168, 127, 218);
+    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+/****************************************************************
+/******** Icons Font Awesome (SCSS version) *********************
+*****************************************************************/
+/*
+ * affecter une opacité à 0 sur icon avec bg linear-gardient, ce qui le rend invisible
+ * la valeur de l'opacité passe à 1 sur le pseudo-element ":hover", ce qui le rend visible
+ */
+.theme-linear-gardient {
+  --fa-secondary-opacity: 1;
+  --fa-primary-color: transparent;
+  --fa-secondary-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
+/*****************************
+   simple loader animation
+******************************/
+.loader {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  animation: spin 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.loader-quart {
+  border-radius: 50%;
+  border: 6px solid #99E2D0;
+}
+.loader-quart::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  bottom: -6px;
+  right: -6px;
+  border: 6px solid transparent;
+  border-top-color: #008766;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+/****************************
+** icon animation on hover **
+*****************************/
+.wrapper-icon {
+  display: block;
+  position: relative;
+}
+
+.wrapper-icon .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 600ms ease;
+  font-size: 3rem;
+}
+
+.wrapper-icon .icon-default {
+  opacity: 1;
+}
+
+.wrapper-icon .icon-hover {
+  opacity: 0;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
+  mix-blend-mode: text;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapper-icon:hover .icon-default,
+.wrapper-icon:focus .icon-default {
+  opacity: 0;
+}
+
+.wrapper-icon:hover .icon-hover,
+.wrapper-icon:focus .icon-hover {
+  opacity: 1;
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
+  mix-blend-mode: text;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/***************************
+ input animation on checked 
+****************************/
 /* pr écran large type desktop */
 /* "fontawesome" files required to use "regular" & "solid" types icons  */
 /*!
@@ -8549,6 +8709,31 @@ a {
   justify-content: center;
 }
 
+/*
+ *  TODO: finir loader (cacher autres éléments puis disparait, voir pt etre avec "visibility: hidden;")
+ */
+.section__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  animation: hide-loader 5s both;
+}
+
+@keyframes hide-loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .fonctionnement {
   background-color: rgb(255, 255, 255);
   padding-top: 2.8rem;
@@ -8651,7 +8836,9 @@ ol li::before {
   top: 1.5rem;
   right: 1.5rem;
   height: 2.9rem;
-  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card__image {
   -o-object-fit: cover;
@@ -8687,47 +8874,5 @@ ol li::before {
 }
 
 /***************************
-****************************
-****************************/
-.wrapper-icon {
-  display: block;
-  position: relative;
-}
-
-.wrapper-icon .icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 600ms ease-in-out;
-}
-
-.wrapper-icon .icon-default {
-  opacity: 1;
-}
-
-.wrapper-icon .icon-hover {
-  opacity: 0;
-}
-
-.wrapper-icon:hover .icon-default,
-.wrapper-icon:focus .icon-default {
-  opacity: 0;
-}
-
-.wrapper-icon:hover .icon-hover,
-.wrapper-icon:focus .icon-hover {
-  opacity: 1;
-}
-
-.fa-heart {
-  transition: color 700ms ease-in-out;
-  font-size: 4rem;
-}
-.fa-heart:hover {
-  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) !important;
-  mix-blend-mode: text;
-  -webkit-background-clip: text;
-          background-clip: text;
-  -webkit-text-fill-color: transparent;
-}/*# sourceMappingURL=style.css.map */
+ into "./partials/utils"
+****************************//*# sourceMappingURL=style.css.map */

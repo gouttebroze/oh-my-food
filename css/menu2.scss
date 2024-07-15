@@ -1,4 +1,6 @@
-@use "./themes.scss";
+@use "./partials/themes";
+//@import "./partials/themes";
+@import "./partials/themes";
 @import "./css_reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @font-face {
