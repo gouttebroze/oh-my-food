@@ -149,8 +149,18 @@ customElements.define('spinning-dots', SpinningDots)
 
 * Finir animation loader
 
-* Problème sur animation **icons heart / like**:
+* fix position titres plats "entrée", "plat", ...
+
+* fix pages 2 , voir 3 et 4 ...
+
+* fix bordure entre logo & adresse : le logo passe par dessus le block de l'adresse ou l inverse ?
+
+* icon like au click sur mobile
+
+* responsive tablette & desktop
+
+<!-- OK * Problème sur animation **icons heart / like**:
 
   * après un survol, l'icon ne retrouve pas son état initial immédiatement mais il devient noir quelques secondes...
   * cette couleur noir correspond à la couleur donné à la propriété `background` sur le second icon (`fa-solid`). Pour rappel, on donne a cet icon une opacité de 0 qui passe à 1 au survol. On a deux icons, l'autre est un `fa-regular` avec une opacité de 1 qui passe à 0 au survol.
-  * au survol, on donne un `background` de couleur `linear-gardient` à l'icon `fa-solid`, c'est cet élement qui à par défaut cette couleur noire.
+  * au survol, on donne un `background` de couleur `linear-gardient` à l'icon `fa-solid`, c'est cet élement qui à par défaut cette couleur noire. -->

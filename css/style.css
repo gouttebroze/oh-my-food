@@ -185,8 +185,11 @@
 .footer-block li {
   font-size: 1.6rem;
 }
-.footer-block span {
-  padding-left: 7px;
+.footer-block .footer-link {
+  padding-left: 1.1rem;
+}
+.footer-block .fa-handshake-angle {
+  font-size: 1rem;
 }
 
 .btn, .card__btn, .btn--linear-gardient {

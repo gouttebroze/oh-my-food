@@ -337,8 +337,11 @@
 .footer-block li {
   font-size: 1.6rem;
 }
-.footer-block span {
-  padding-left: 7px;
+.footer-block .footer-link {
+  padding-left: 1.1rem;
+}
+.footer-block .fa-handshake-angle {
+  font-size: 1rem;
 }
 
 @font-face {
@@ -475,7 +478,8 @@ ul {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 1; /* flex-grow property with value to 1 (0 by default) 
+allow to gobble up any extra space in the card container */
 }
 .card__content--title {
   font-size: 1.8rem;

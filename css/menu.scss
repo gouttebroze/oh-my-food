@@ -150,7 +150,8 @@ ul {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 1; /* flex-grow property with value to 1 (0 by default) 
+    allow to gobble up any extra space in the card container */
 
     &--title {
       font-size: 1.8rem;
