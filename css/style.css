@@ -164,6 +164,9 @@ ul {
   --fa-secondary-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
+/* breakpoints */
+/* desktop */
+/* tablette */
 .header-block {
   display: flex;
   flex-direction: column;
@@ -185,6 +188,11 @@ ul {
   width: 100%;
   height: 231px;
 }
+@media only screen and (min-width: 1024px) {
+  .header-block__image {
+    height: 393px;
+  }
+}
 
 .home-header-block {
   display: flex;
@@ -203,6 +211,29 @@ ul {
   color: white;
   padding-bottom: 2.2rem;
 }
+@media only screen and (min-width: 1024px) {
+  .footer-block {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 4rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer-block ul {
+    display: flex;
+    flex-direction: row;
+    padding-top: 6.4rem;
+    gap: 2rem;
+  }
+  .footer-block ul li:nth-child(-n+2) {
+    width: 19rem;
+    white-space: nowrap;
+    padding-right: 1rem;
+  }
+  .footer-block ul li:nth-last-child(-n+2) {
+    width: 13rem;
+  }
+}
 .footer-block__title {
   font-family: "Shrikhand", serif;
   font-size: 1.8rem;
@@ -210,6 +241,11 @@ ul {
   padding-left: 2.5rem;
   padding-top: 2.2rem;
   margin-top: 0;
+}
+@media only screen and (min-width: 1024px) {
+  .footer-block__title {
+    padding-top: 5.7rem;
+  }
 }
 .footer-block ul {
   padding-left: 2.5rem;
@@ -386,7 +422,6 @@ ul {
 /* breakpoints */
 /* desktop */
 /* tablette */
-/* mobile */
 /* "fontawesome" files required to use "regular" & "solid" types icons  */
 /*!
  * Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com
@@ -8739,6 +8774,11 @@ a {
   padding-right: 2.9rem;
   padding-left: 3.8rem;
 }
+@media only screen and (min-width: 1024px) {
+  .hero__title {
+    font-size: 4rem;
+  }
+}
 .hero__subtitle {
   text-align: center;
   font-size: 1.8rem;
@@ -8781,6 +8821,12 @@ a {
   flex-direction: column;
   padding-bottom: 6.8rem;
 }
+@media only screen and (min-width: 1024px) {
+  .fonctionnement {
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+}
 .fonctionnement__title {
   font-size: 2.4rem;
   padding-top: 2.5rem;
@@ -8793,6 +8839,13 @@ a {
   gap: 2rem;
   margin-right: 2rem;
   margin-left: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  .fonctionnement__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .card__list {
@@ -8807,9 +8860,16 @@ a {
   height: 7.2rem;
   border-radius: 25px;
   cursor: pointer;
+  padding-left: 2.2rem;
+  padding-right: 3.8rem;
 }
 .card__list--icon {
   padding-right: 3rem;
+}
+@media only screen and (min-width: 1024px) {
+  .card__list--icon {
+    padding-left: 4rem;
+  }
 }
 .card__list--text {
   display: inline-block;
@@ -8853,10 +8913,33 @@ ol li::before {
   background-color: rgb(246, 246, 246);
   gap: 18px;
 }
+@media only screen and (min-width: 1024px) {
+  .cards {
+    padding-left: 18rem;
+    padding-right: 18rem;
+    gap: 0;
+  }
+}
 .cards__title {
   margin-top: 5.4rem;
   font-size: 2.4rem;
   margin-left: 2rem;
+}
+@media only screen and (min-width: 1024px) {
+  .cards__title {
+    margin-top: 3rem;
+    margin-bottom: 2.8rem;
+    margin-left: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cards__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5rem;
+    -moz-column-gap: 10rem;
+         column-gap: 10rem;
+  }
 }
 
 .card {
@@ -8866,6 +8949,11 @@ ol li::before {
   border-radius: 15px;
   background-color: rgb(255, 255, 255);
   margin: 0 17px;
+}
+@media only screen and (min-width: 1024px) {
+  .card {
+    margin: 0;
+  }
 }
 .card__btn {
   background-color: #99E2D0;
@@ -8879,6 +8967,11 @@ ol li::before {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (min-width: 1024px) {
+  .card__btn {
+    width: 6vw;
+  }
 }
 .card__image {
   -o-object-fit: cover;
@@ -8913,17 +9006,4 @@ ol li::before {
   margin-bottom: 1.2rem;
 }
 
-/***************************
-
-****************************/
-@media only screen and (min-width: 1024px) {
-  .fonctionnement__content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-  .cards__wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}/*# sourceMappingURL=style.css.map */
+/******** tablette ***********//*# sourceMappingURL=style.css.map */
