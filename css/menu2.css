@@ -316,7 +316,7 @@ ul {
 }
 .btn--linear-gardient:hover {
   /* todo */
-  background: #9356DC;
+  background: hsl(267, 66%, 60%);
 }
 
 /* .btn--width {

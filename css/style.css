@@ -8980,7 +8980,7 @@ ol li::before {
   /* to create circle around counter number */
   content: counter(my-count);
   /* create an incremental counter on every <li> */
-  background: #9356DC;
+  background: hsl(267, 66%, 60%);
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
