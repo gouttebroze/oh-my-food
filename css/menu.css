@@ -42,22 +42,46 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
 }
 .btn--linear-gardient:hover {
-  animation: btn-animated 200ms;
+  animation: btn-animated 500ms;
   animation-direction: alternate;
   animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes btn-animated {
-  from {
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  0% {
+    background: hsl(267, 66%, 60%);
+    background: linear-gradient(0deg, hsl(267, 66%, 60%) 0%, hsl(317, 100%, 74%) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
-  to {
-    background: rgb(168, 127, 218);
-    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+  20% {
+    background: hsl(267, 64%, 62%);
+    background: linear-gradient(0deg, hsl(267, 67%, 62%) 0%, hsl(317, 98%, 75%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.27);
+  }
+  40% {
+    background: hsl(267, 62%, 64%);
+    background: linear-gradient(0deg, hsl(267, 69%, 64%) 0%, hsl(317, 95%, 75.5%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.29);
+  }
+  60% {
+    background: hsl(267, 59%, 65%);
+    background: linear-gradient(0deg, hsl(267, 70%, 66%) 0%, hsl(317, 92%, 76%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.31);
+  }
+  80% {
+    background: hsl(267, 57%, 67%);
+    background: linear-gradient(0deg, hsl(267, 71%, 69%) 0%, hsl(317, 90%, 76.5%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.33);
+  }
+  100% {
+    background: hsl(267, 55%, 68%);
+    background: linear-gradient(0deg, hsl(267, 73%, 71%) 0%, hsl(317, 88%, 77%) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
@@ -69,12 +93,6 @@
  * affecter une opacité à 0 sur icon avec bg linear-gardient, ce qui le rend invisible
  * la valeur de l'opacité passe à 1 sur le pseudo-element ":hover", ce qui le rend visible
  */
-.theme-linear-gardient {
-  --fa-secondary-opacity: 1;
-  --fa-primary-color: transparent;
-  --fa-secondary-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
-
 html {
   font-size: 62.5%;
   font-family: "Roboto", sans-serif;
@@ -130,22 +148,46 @@ ul {
 }
 
 .btn--linear-gardient:hover {
-  animation: btn-animated 200ms;
+  animation: btn-animated 500ms;
   animation-direction: alternate;
   animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes btn-animated {
-  from {
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  0% {
+    background: hsl(267, 66%, 60%);
+    background: linear-gradient(0deg, hsl(267, 66%, 60%) 0%, hsl(317, 100%, 74%) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
-  to {
-    background: rgb(168, 127, 218);
-    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+  20% {
+    background: hsl(267, 64%, 62%);
+    background: linear-gradient(0deg, hsl(267, 67%, 62%) 0%, hsl(317, 98%, 75%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.27);
+  }
+  40% {
+    background: hsl(267, 62%, 64%);
+    background: linear-gradient(0deg, hsl(267, 69%, 64%) 0%, hsl(317, 95%, 75.5%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.29);
+  }
+  60% {
+    background: hsl(267, 59%, 65%);
+    background: linear-gradient(0deg, hsl(267, 70%, 66%) 0%, hsl(317, 92%, 76%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.31);
+  }
+  80% {
+    background: hsl(267, 57%, 67%);
+    background: linear-gradient(0deg, hsl(267, 71%, 69%) 0%, hsl(317, 90%, 76.5%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.33);
+  }
+  100% {
+    background: hsl(267, 55%, 68%);
+    background: linear-gradient(0deg, hsl(267, 73%, 71%) 0%, hsl(317, 88%, 77%) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
@@ -157,12 +199,6 @@ ul {
  * affecter une opacité à 0 sur icon avec bg linear-gardient, ce qui le rend invisible
  * la valeur de l'opacité passe à 1 sur le pseudo-element ":hover", ce qui le rend visible
  */
-.theme-linear-gardient {
-  --fa-secondary-opacity: 1;
-  --fa-primary-color: transparent;
-  --fa-secondary-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
-
 /*****************************
    simple loader animation
 ******************************/
@@ -289,22 +325,46 @@ ul {
 }
 
 .btn--linear-gardient:hover {
-  animation: btn-animated 200ms;
+  animation: btn-animated 500ms;
   animation-direction: alternate;
   animation-fill-mode: forwards;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes btn-animated {
-  from {
-    background: rgb(147, 86, 220);
-    background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  0% {
+    background: hsl(267, 66%, 60%);
+    background: linear-gradient(0deg, hsl(267, 66%, 60%) 0%, hsl(317, 100%, 74%) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
-  to {
-    background: rgb(168, 127, 218);
-    background: linear-gradient(0deg, rgb(175, 126, 235) 0%, rgb(248, 144, 219) 100%);
+  20% {
+    background: hsl(267, 64%, 62%);
+    background: linear-gradient(0deg, hsl(267, 67%, 62%) 0%, hsl(317, 98%, 75%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.27);
+  }
+  40% {
+    background: hsl(267, 62%, 64%);
+    background: linear-gradient(0deg, hsl(267, 69%, 64%) 0%, hsl(317, 95%, 75.5%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.29);
+  }
+  60% {
+    background: hsl(267, 59%, 65%);
+    background: linear-gradient(0deg, hsl(267, 70%, 66%) 0%, hsl(317, 92%, 76%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.31);
+  }
+  80% {
+    background: hsl(267, 57%, 67%);
+    background: linear-gradient(0deg, hsl(267, 71%, 69%) 0%, hsl(317, 90%, 76.5%) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.33);
+  }
+  100% {
+    background: hsl(267, 55%, 68%);
+    background: linear-gradient(0deg, hsl(267, 73%, 71%) 0%, hsl(317, 88%, 77%) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc", endColorstr="#ff79da", GradientType=1);
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
   }
@@ -316,12 +376,6 @@ ul {
  * affecter une opacité à 0 sur icon avec bg linear-gardient, ce qui le rend invisible
  * la valeur de l'opacité passe à 1 sur le pseudo-element ":hover", ce qui le rend visible
  */
-.theme-linear-gardient {
-  --fa-secondary-opacity: 1;
-  --fa-primary-color: transparent;
-  --fa-secondary-color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-}
-
 /* breakpoints */
 /* desktop */
 /* tablette */
@@ -346,6 +400,11 @@ ul {
   width: 100%;
   height: 231px;
 }
+@media only screen and (min-width: 768px) {
+  .header-block__image {
+    height: 310px;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .header-block__image {
     height: 393px;
@@ -357,6 +416,9 @@ ul {
   flex-direction: column;
   align-items: center;
   height: 6.3rem;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  z-index: 500;
+  position: relative;
 }
 .home-header-block .logo {
   width: auto;
@@ -369,11 +431,32 @@ ul {
   color: white;
   padding-bottom: 2.2rem;
 }
+@media only screen and (min-width: 768px) {
+  .footer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .footer-block {
     display: flex;
     flex-direction: row-reverse;
     padding-right: 4rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footer-block ul {
+    display: flex;
+    flex-direction: row;
+    padding-top: 3.4rem;
+    gap: 2rem;
+  }
+  .footer-block ul li:nth-child(-n+2) {
+    padding-right: 1rem;
+  }
+  .footer-block ul li:nth-last-child(-n+2) {
+    width: 13rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -399,6 +482,11 @@ ul {
   padding-left: 2.5rem;
   padding-top: 2.2rem;
   margin-top: 0;
+}
+@media only screen and (min-width: 768px) {
+  .footer-block__title {
+    padding-left: 0;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .footer-block__title {
@@ -460,6 +548,12 @@ ul {
   z-index: 2;
   top: -46px;
 }
+@media only screen and (min-width: 768px) {
+  .main-container {
+    margin-left: 7.5vw;
+    margin-right: 7.5vw;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .main-container {
     margin-left: 15vw;
@@ -471,6 +565,11 @@ ul {
   display: flex;
   align-items: center;
   gap: 3rem;
+}
+@media only screen and (min-width: 768px) {
+  .title-block {
+    justify-content: center;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .title-block {
@@ -492,6 +591,12 @@ ul {
 .cards {
   background-color: rgb(246, 246, 246);
   padding: 1rem 1.7rem;
+}
+@media only screen and (min-width: 768px) {
+  .cards {
+    margin-right: 6vw;
+    margin-left: 6vw;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .cards {

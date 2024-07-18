@@ -70,8 +70,9 @@ a {
   justify-content: center;
   /* to center icon & title on horizontal axe */
   column-gap: 20px;
-  background-color: themes.$second-background-color;
-  box-shadow: inset 2px -4px 5px 2px rgba(0, 0, 0, 0.25);
+  background-color: themes.$third-background-color;
+  // box-shadow: inset 2px -4px 5px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 7px 7px 0px rgba(0, 0, 0, 0.25);
 
   &__image {
     width: 12px;
@@ -345,28 +346,3 @@ ol {
     }
   }
 }
-/******** tablette ***********/
-// @media #{$medium-screen} {
-//   .fonctionnement {
-//     padding-left: 8rem;
-//     padding-right: 8rem;
-//   }
-
-//   .cards {
-//     padding-left: 8rem;
-//     padding-right: 8rem;
-//     gap: 0;    
-    
-//     &__title {
-//       margin-top: 3rem;
-//       margin-bottom: 2.8rem;
-//       margin-left: 0;
-//     }
-
-//     &__wrapper {
-//       
-//       row-gap: 2rem;
-//       column-gap: 4rem;
-//     }
-//   }
-// }

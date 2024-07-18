@@ -100,6 +100,10 @@
 
 ## VEILLE - JAVASCRIPT
 
+* créer le `favicon`, voir ressources:
+    + [mini-cours CSS](https://haudrey.notion.site/Changer-l-ic-ne-du-site-dans-l-onglet-favicon-b9d1a65f263541b6a1cbab3e95f06ce9), 
+    + [tuto alsacreations](https://www.alsacreations.com/astuce/lire/59-icon-link-rel-favicon-ico-navigateur.html)
+
 * créer la partie JavaScript du loader avec la base CSS déjà réalisée
 
 * proposition: ``loader`` sous forme de ``custom element``, simple d'utilisation
@@ -147,28 +151,10 @@ customElements.define('spinning-dots', SpinningDots)
 
 ## TODO - TROUBLES
 
-* Finir animation loader
-
 * Continuer veille (sur custom-element & autres)
 
-* fix bugs (position titres des 3 cards ("entrée", "plat", "dessert"))
-
 * fix pages 2 , voir 3 et 4 ...
-
-* fix bordure entre logo & adresse : le logo passe par dessus le block de l'adresse ou l inverse ?
-
-* icon like au click sur mobile
-
-* responsive tablette & desktop
 
 * faire 1 base.css & un main.css 
 
 * mettre fichier font awesome scss ds 1 dossier à part
-
-* fix title & sous-titre des cards (ds menu) pourquoi les ... fonctionne pas ?
-
-<!-- OK * Problème sur animation **icons heart / like**:
-
-  * après un survol, l'icon ne retrouve pas son état initial immédiatement mais il devient noir quelques secondes...
-  * cette couleur noir correspond à la couleur donné à la propriété `background` sur le second icon (`fa-solid`). Pour rappel, on donne a cet icon une opacité de 0 qui passe à 1 au survol. On a deux icons, l'autre est un `fa-regular` avec une opacité de 1 qui passe à 0 au survol.
-  * au survol, on donne un `background` de couleur `linear-gardient` à l'icon `fa-solid`, c'est cet élement qui à par défaut cette couleur noire. -->
