@@ -1,15 +1,16 @@
 @use "./partials/themes";
 
 @import "./partials/base";
-@import "./partials/componants";
+@import "./layout/header";
+@import "./layout/footer";
 @import "./partials/utils";
-@import "./css_reset.css";
+@import "./base/reset";
 @import "./partials/responsive";
 
 /* "fontawesome" files required to use "regular" & "solid" types icons  */
-@import "./fontawesome.scss";
-@import "./regular.scss";
-@import "./solid.scss";
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/regular.scss";
+@import "./fontawesome/solid.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
@@ -192,8 +193,7 @@ a {
   align-items: center;
   @extend %card-list-shadow;
   border: none;
-  font-size: 1.6rem;
-  font-weight: 500;
+  
   height: 7.2rem;
   border-radius: 25px;
   cursor: pointer;
@@ -210,6 +210,7 @@ a {
 
   &--text {
     display: inline-block;
+    font-size: 1.6rem;
   }
 }
 
@@ -232,19 +233,20 @@ ol {
     content: counter(my-count);
     /* create an incremental counter on every <li> */
     background: themes.$primary-color;
-    width: 2rem;
-    height: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 50%;
     display: inline-block;
-    line-height: 2rem;
+    line-height: 2.4rem;
     color: themes.$background-color;
     text-align: center;
     margin-right: 0.5rem;
+    font-size: 1.4rem;
 
     /* to move circles positions */
     position: absolute;
     top: 2.5rem;
-    left: -0.8rem;
+    left: -1.1rem;
   }
 }
 
@@ -271,6 +273,10 @@ ol {
     }
   }
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
     @media #{$large-screen} {
       display: grid;  
       grid-template-columns: repeat(2, 1fr);
@@ -304,6 +310,7 @@ ol {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.4rem;
 
     @media #{$large-screen} {
       width: 6vw;

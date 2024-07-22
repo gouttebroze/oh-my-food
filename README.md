@@ -1,5 +1,10 @@
 # SASS - BEM - CSS animations
 
+## CSS structure organisation
+
+* Structure `CSS`-`SASS`:
+  * Voir le [pattern SASS 7.1](https://sass-guidelin.es/#the-7-1-pattern)
+
 ## Identité graphique
 
 * **Polices**:

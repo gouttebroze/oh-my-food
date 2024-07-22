@@ -1,0 +1,56 @@
+@use "../partials/themes" as t;
+@import "../partials/responsive";
+
+.header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .fa-arrow-left {
+      @media #{$large-screen} { // todo: coller à droite
+      }
+    }
+
+    &--logo {
+      width: 40vh;
+      margin: 2rem 4rem;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 231px;
+
+    @media #{$medium-screen} {
+      height: 310px;
+    }
+
+    @media #{$large-screen} {
+      height: 393px;
+    }
+  }
+}
+
+.home-header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 6.3rem;
+  // box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+  z-index: 500;
+  position: relative;
+
+  .logo {
+    width: auto;
+    height: 3.6rem;
+    margin: 2rem 4rem;
+  }
+}
