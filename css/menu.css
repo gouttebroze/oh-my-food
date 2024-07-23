@@ -396,9 +396,19 @@ ul {
   align-items: center;
   width: 100%;
 }
+@media only screen and (min-width: 1024px) {
+  .header-block__top a {
+    padding-left: 1.7rem;
+  }
+}
 .header-block__top--logo {
   width: 40vh;
   margin: 2rem 4rem;
+}
+@media only screen and (min-width: 1024px) {
+  .header-block__top--logo {
+    margin: 2rem auto;
+  }
 }
 .header-block__image {
   -o-object-fit: cover;
@@ -8946,13 +8956,6 @@ readers do not read off random characters that represent icons */
   font-weight: 900;
 }
 
-/****** export to "base" file *******/
-.title {
-  font-family: "Shrikhand", serif;
-  font-size: 2.8rem;
-  /* font-weight: 400; */
-}
-
 .btn {
   box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.2);
@@ -8961,6 +8964,11 @@ readers do not read off random characters that represent icons */
 
 .card {
   box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-family: "Shrikhand", serif;
+  font-size: 2.8rem;
 }
 
 .btn {
@@ -8972,8 +8980,6 @@ readers do not read off random characters that represent icons */
   display: flex;
   flex-direction: column;
   margin-bottom: 1.2rem;
-  /* margin-left: 1.3rem;
-  margin-right: 1.3rem; */
 }
 
 .main-container {
@@ -9000,6 +9006,7 @@ readers do not read off random characters that represent icons */
 
 .title-block {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   gap: 3rem;
 }
@@ -9031,8 +9038,8 @@ readers do not read off random characters that represent icons */
 }
 @media only screen and (min-width: 768px) {
   .cards {
-    margin-right: 6vw;
-    margin-left: 6vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -9092,7 +9099,7 @@ readers do not read off random characters that represent icons */
   margin-right: 0;
 }
 .card__content {
-  padding: 1.2rem 0 1.2rem 1.5rem;
+  padding: 1.2rem 0 1.2rem 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

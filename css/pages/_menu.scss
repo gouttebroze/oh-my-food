@@ -1,13 +1,13 @@
-@use "./partials/themes";
-@import "./partials/base";
-@import "./partials/utils";
-@import "./layout/header";
-@import "./layout/footer";
-@import "./partials/responsive";
-@import "./base/reset";
-@import "./fontawesome/fontawesome.scss";
-@import "./fontawesome/regular.scss";
-@import "./fontawesome/solid.scss";
+@use "../partials/themes";
+@import "../partials/base";
+@import "../partials/utils";
+@import "../layout/header";
+@import "../layout/footer";
+@import "../partials/responsive";
+@import "../base/reset";
+@import "../fontawesome/fontawesome.scss";
+@import "../fontawesome/regular.scss";
+@import "../fontawesome/solid.scss";
 
 .title {
   font-family: "Shrikhand", serif;

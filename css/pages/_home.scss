@@ -1,0 +1,355 @@
+@use "../partials/themes";
+
+@import "../partials/base";
+@import "../layout/header";
+@import "../layout/footer";
+@import "../partials/utils";
+@import "../base/reset";
+@import "../partials/responsive";
+
+/* "fontawesome" files required to use "regular" & "solid" types icons  */
+@import "../fontawesome/fontawesome.scss";
+@import "../fontawesome/regular.scss";
+@import "../fontawesome/solid.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+%shadow {
+  box-shadow: 0px 10px 6px themes.$shadow-color;
+  -webkit-box-shadow: 0px 10px 12px 0px themes.$shadow-color;
+  -moz-box-shadow: 0px 10px 12px 0px themes.$shadow-color;
+}
+
+%location-shadow {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+%card-list-shadow {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+.btn {
+  @extend %shadow;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  height: 7.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+
+  &__icon {
+    padding-right: 3rem;
+  }
+
+  &__text {
+    display: inline-block;
+  }
+}
+
+.main-container {
+  background-color: themes.$second-background-color;
+  padding-bottom: 6.6rem;
+
+}
+
+.location {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  /* to center icon & title on vertical axe */
+  justify-content: center;
+  /* to center icon & title on horizontal axe */
+  column-gap: 20px;
+  background-color: themes.$third-background-color;
+  // box-shadow: inset 2px -4px 5px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: -1px 7px 7px 0px rgba(0, 0, 0, 0.25);
+
+  &__image {
+    width: 12px;
+    height: 16px;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+}
+
+.hero {
+  margin-top: 3.9rem;
+  margin-bottom: 4.5rem;
+  text-align: center;
+  background-color: themes.$second-background-color;
+
+  &__title {
+    text-align: center;
+    font-size: 2.4rem;
+    padding-right: 2.9rem;
+    padding-left: 3.8rem;
+
+
+    @media #{$large-screen} {
+      font-size: 4rem;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 300;
+    padding: 1.7rem 2.2rem 2.9rem 2.2rem;
+  }
+}
+
+.btn__block {
+  display: flex;
+  justify-content: center;
+}
+
+/*
+ *  TODO: finir loader (cacher autres éléments puis disparait, voir pt etre avec "visibility: hidden;")
+ */
+.section__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-bottom: 1.5rem;
+  animation: hide-loader 5s both;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(122, 117, 117, 0.5);
+  z-index: 100;
+}
+
+@keyframes hide-loader {
+  0% {
+    display: flex;
+    // opacity: 1;
+  }
+  50% {
+    // opacity: 0.5;
+  }
+  75% {
+    // opacity: 0.25;
+  }
+  100% {
+    // opacity: 0;
+    display: none;
+  }
+}
+
+.fonctionnement {
+  background-color: themes.$background-color;
+  padding-top: 2.8rem;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6.8rem;
+  
+
+  @media #{$large-screen} {
+    padding-left: 18rem;
+    padding-right: 18rem;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.6rem;
+    margin-left: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+
+    @media #{$large-screen} {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.card__list {
+  background-color: themes.$second-background-color;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @extend %card-list-shadow;
+  border: none;
+  
+  height: 7.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  padding-left: 2.2rem;
+  padding-right: 3.8rem;
+
+  &--icon {
+    padding-right: 3rem;
+
+    @media #{$large-screen} {
+      padding-left: 4rem;
+    }
+  }
+
+  &--text {
+    display: inline-block;
+    font-size: 1.6rem;
+  }
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+ol {
+  counter-reset: my-count;
+
+  li {
+    counter-increment: my-count;
+    margin: 0.25rem;
+    position: relative;
+  }
+
+  li::before {
+    /* to create circle around counter number */
+    content: counter(my-count);
+    /* create an incremental counter on every <li> */
+    background: themes.$primary-color;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2.4rem;
+    color: themes.$background-color;
+    text-align: center;
+    margin-right: 0.5rem;
+    font-size: 1.4rem;
+
+    /* to move circles positions */
+    position: absolute;
+    top: 2.5rem;
+    left: -1.1rem;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  background-color: themes.$second-background-color;
+  gap: 18px;
+
+  @media #{$large-screen} {
+    padding-left: 18rem;
+    padding-right: 18rem;
+    gap: 0;
+  }
+  &__title {
+    margin-top: 5.4rem;
+    font-size: 2.4rem;
+    margin-left: 2rem;
+
+    @media #{$large-screen} {
+      margin-top: 3rem;
+      margin-bottom: 2.8rem;
+      margin-left: 0;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    @media #{$large-screen} {
+      display: grid;  
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 5rem;
+      column-gap: 10rem;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 15px;
+  background-color: themes.$background-color;
+  margin: 0 17px;
+
+  @media #{$large-screen} {
+    margin: 0;
+  }
+  &__btn {
+    @extend .btn;
+    background-color: themes.$third-color;
+    color: themes.$btn-text-color;
+    border-radius: 0.3rem;
+    width: 20vw;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    height: 2.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+
+    @media #{$large-screen} {
+      width: 6vw;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    height: 184px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 30px;
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      padding-left: 1.3rem;
+
+      &--title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        padding-bottom: .5rem;
+        margin-top: 1.6rem;
+        margin-bottom: 0;
+      }
+
+      &--subtitle {
+        font-size: 1.7rem;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 1.2rem;
+      }
+    }
+  }
+}
