@@ -106,8 +106,8 @@
 ## VEILLE - JAVASCRIPT
 
 * créer le `favicon`, voir ressources:
-    + [mini-cours CSS](https://haudrey.notion.site/Changer-l-ic-ne-du-site-dans-l-onglet-favicon-b9d1a65f263541b6a1cbab3e95f06ce9), 
-    + [tuto alsacreations](https://www.alsacreations.com/astuce/lire/59-icon-link-rel-favicon-ico-navigateur.html)
+  * [mini-cours CSS](https://haudrey.notion.site/Changer-l-ic-ne-du-site-dans-l-onglet-favicon-b9d1a65f263541b6a1cbab3e95f06ce9),
+  * [tuto alsacreations](https://www.alsacreations.com/astuce/lire/59-icon-link-rel-favicon-ico-navigateur.html)
 
 * créer la partie JavaScript du loader avec la base CSS déjà réalisée
 
@@ -160,6 +160,25 @@ customElements.define('spinning-dots', SpinningDots)
 
 * fix pages 2 , voir 3 et 4 ...
 
-* faire 1 base.css & un main.css 
+* faire 1 base.css & un main.css
 
 * mettre fichier font awesome scss ds 1 dossier à part
+
+## HTML / CSS validator
+
+* [`HTML` validator](https://validator.w3.org/nu/)
+
+  * ``html`` code: issues to fix:
+
+    * *Error: The element button must not appear as a descendant of the a element.*
+      *From line 35, column 11; to line 35, column 47*
+
+    ```html
+          <button class="btn--linear-gardient">Explor...</button>
+    ```
+
+* [`CSS` validator](https://jigsaw.w3.org/css-validator) :
+
+  * ``CSS`` code: issues to fix:
+
+    * `Roboto` font family

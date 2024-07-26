@@ -1,9 +1,11 @@
 /* breakpoints */
-$large: 1024px;
 $medium: 768px;
-
-/* desktop */
-$large-screen: "only screen and (min-width: #{$large})";
+$large: 1024px;
+$xl: 1200px;
 
 /* tablette */
 $medium-screen: "only screen and (min-width: #{$medium})";
+/* desktop */
+$large-screen: "only screen and (min-width: #{$large})";
+/* xl desktop */
+$xl-screen: "only screen and (min-width: #{$xl})";

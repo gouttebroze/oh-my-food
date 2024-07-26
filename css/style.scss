@@ -7,7 +7,6 @@
 @import "./base/reset";
 @import "./partials/responsive";
 
-/* "fontawesome" files required to use "regular" & "solid" types icons  */
 @import "./fontawesome/fontawesome.scss";
 @import "./fontawesome/regular.scss";
 @import "./fontawesome/solid.scss";
@@ -99,7 +98,13 @@ a {
     padding-left: 3.8rem;
 
 
+    @media #{$medium-screen} {
+      font-size: 3rem;
+    }
     @media #{$large-screen} {
+      font-size: 3.5rem;
+    }
+    @media #{$xl-screen} {
       font-size: 4rem;
     }
   }
@@ -157,8 +162,17 @@ a {
   flex-direction: column;
   padding-bottom: 6.8rem;
   
+  @media #{$medium-screen} {
+    padding-left: 12rem;
+    padding-right: 12rem;
+  } 
 
   @media #{$large-screen} {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  @media #{$xl-screen} {
     padding-left: 18rem;
     padding-right: 18rem;
   }
@@ -255,12 +269,24 @@ ol {
   flex-direction: column;
   background-color: themes.$second-background-color;
   gap: 18px;
+  
+  @media #{$medium-screen} {
+    padding-left: 12rem;      
+    padding-right: 12rem;
+  }
 
   @media #{$large-screen} {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    gap: 0;
+  }
+
+  @media #{$xl-screen} {
     padding-left: 18rem;
     padding-right: 18rem;
     gap: 0;
   }
+
   &__title {
     margin-top: 5.4rem;
     font-size: 2.4rem;

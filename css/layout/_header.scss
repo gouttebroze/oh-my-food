@@ -12,14 +12,10 @@
     align-items: center;
     width: 100%;
 
-    @media #{$large-screen} {
-
-    }
 
     a {
       @media #{$large-screen} { // todo: coller à droite
         padding-left: 1.7rem;
-        
       }
     }
 

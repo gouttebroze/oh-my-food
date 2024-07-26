@@ -1,11 +1,14 @@
 @use "./partials/themes";
 
-@import "./partials/base";
+@import "./partials/responsive";
 @import "./partials/utils";
+
 @import "./layout/header";
 @import "./layout/footer";
-@import "./partials/responsive";
+
+@import "./base/base";
 @import "./base/reset";
+
 @import "./fontawesome/fontawesome.scss";
 @import "./fontawesome/regular.scss";
 @import "./fontawesome/solid.scss";
@@ -65,10 +68,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 3rem;
+  
 
   @media #{$medium-screen} {
     justify-content: center;
+    gap: 3rem;
   }
 
   @media #{$large-screen} {
@@ -160,7 +164,8 @@
   }
 
   &__content {  
-    padding: 1.2rem 0 1.2rem 0;
+    max-width: 80%;
+    padding: 1.2rem 1rem 1.2rem 0;
     white-space: nowrap;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
