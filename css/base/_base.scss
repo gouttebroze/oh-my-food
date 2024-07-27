@@ -1,6 +1,9 @@
+@use "../partials/themes" as t;
+
 html {
   font-size: 62.5%;
-  font-family: "Roboto", sans-serif;
+  // font-family: "Roboto", sans-serif;
+  font-family: t.$secondary-font;
   box-sizing: border-box;
 }
 

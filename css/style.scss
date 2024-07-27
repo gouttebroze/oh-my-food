@@ -1,22 +1,24 @@
 @use "./partials/themes";
 
-@import "./partials/base";
+@import "./base/reset";
+@import "./base/base";
+
 @import "./layout/header";
 @import "./layout/footer";
+
 @import "./partials/utils";
-@import "./base/reset";
 @import "./partials/responsive";
 
 @import "./fontawesome/fontawesome.scss";
 @import "./fontawesome/regular.scss";
 @import "./fontawesome/solid.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-html {
-  font-size: 62.5%;
-  font-family: "Roboto", sans-serif;
-}
+// html {
+//   font-size: 62.5%;
+//   font-family: "Roboto", sans-serif;
+// }
 
 %shadow {
   box-shadow: 0px 10px 6px themes.$shadow-color;
@@ -32,10 +34,10 @@ html {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
-a {
-  color: inherit;
-  text-decoration: none
-}
+// a {
+//   color: inherit;
+//   text-decoration: none
+// }
 
 .btn {
   @extend %shadow;
@@ -58,7 +60,6 @@ a {
 .main-container {
   background-color: themes.$second-background-color;
   padding-bottom: 6.6rem;
-
 }
 
 .location {

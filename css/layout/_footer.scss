@@ -20,7 +20,8 @@
   }
 
   &__title {
-    font-family: "Shrikhand", serif;
+    // font-family: "Shrikhand", serif;
+    font-family: t.$primary-font;
     font-size: 1.8rem;
     font-weight: 400;
     padding-left: 2.5rem;
@@ -73,8 +74,6 @@
       }
     }
   }
-
-  
 
   li {
     font-size: 1.6rem;

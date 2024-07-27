@@ -1,13 +1,13 @@
 @use "./partials/themes";
 
+@import "./base/base";
+@import "./base/reset";
+
 @import "./partials/responsive";
 @import "./partials/utils";
 
 @import "./layout/header";
 @import "./layout/footer";
-
-@import "./base/base";
-@import "./base/reset";
 
 @import "./fontawesome/fontawesome.scss";
 @import "./fontawesome/regular.scss";
@@ -28,8 +28,7 @@
 }
 
 .title {
-  font-family: "Shrikhand", serif;
-  font-size: 2.8rem;
+  font-family: themes.$primary-font;
 }
 
 .btn {
@@ -68,7 +67,6 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 
   @media #{$medium-screen} {
     justify-content: center;
@@ -137,7 +135,6 @@
   font-size: 1.6rem;
   background-color: themes.$background-color;
   overflow: hidden;
-  // padding: 1.2rem 0 1.2rem 1.5rem;
   animation: cards-onset .3s;
   animation-play-state: running;
   animation-fill-mode: both;
@@ -236,9 +233,9 @@
   menu cards animation on page loading 
 *****************************************/
 /*
- * itération sur les 9 classes "card-$i"
+ * itération sur les classes "card-$i"
  */
-@for $i from 1 through 10 {
+@for $i from 1 through 11 {
   .card-#{$i - 1} {
     animation-delay: ($i * 0.2s);
   }

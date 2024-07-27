@@ -1,0 +1,38 @@
+/****************************************
+  menu cards animation on page loading 
+*****************************************/
+/*
+ * itération sur les 9 classes "card-$i"
+ */
+ @for $i from 1 through 11 {
+        .card-#{$i - 1} {
+            animation-delay: ($i * 0.2s);
+        }
+    }
+    
+@mixin cards-iteration {
+    @for $i from 1 through 11 {
+        .card-#{$i - 1} {
+            animation-delay: ($i * 0.2s);
+        }
+    }
+}
+
+@mixin cards-keyframes {
+    @keyframes cards-onset {
+        from {
+            transform: scale(0);   
+        } 
+        to {
+            transform: scale(1);
+        }
+    }
+}
+@keyframes cards-onset {
+        from {
+            transform: scale(0);   
+        } 
+        to {
+            transform: scale(1);
+        }
+    }
